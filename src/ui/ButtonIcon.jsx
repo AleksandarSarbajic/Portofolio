@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const ButtonIcon = styled.button`
+  position: relative;
   background: none;
   border: none;
   padding: 0.6rem;

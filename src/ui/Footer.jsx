@@ -4,12 +4,20 @@ import styled from "styled-components";
 const StyledFooter = styled.footer`
   padding: 1.5rem 5%;
   display: flex;
+  @media only screen and (max-width: 40em) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const StyledLogo = styled.h4`
   font-size: 2rem;
   margin-right: auto;
   font-weight: 500;
+  @media only screen and (max-width: 40em) {
+    margin: 1rem 0;
+  }
 `;
 
 const StyledList = styled.ul`

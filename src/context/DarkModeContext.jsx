@@ -1,5 +1,31 @@
 import { createContext, useContext, useEffect } from "react";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
+import styled, { css } from "styled-components";
+const StyledColor = styled.div`
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 1rem;
+  right: 4.2%;
+  background-color: var(--bg-color);
+  z-index: 1000;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1),
+    -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+
+  z-index: -1;
+  ${(props) =>
+    props.$active
+      ? css`
+          transform: scale(100);
+        `
+      : css`
+          transform: scale(0);
+        `};
+`;
 
 const DarkModeContext = createContext();
 
@@ -27,6 +53,7 @@ function DarkModeProvider({ children }) {
   }
   return (
     <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+      <StyledColor $active={isDarkMode} />
       {children}
     </DarkModeContext.Provider>
   );

@@ -72,7 +72,7 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
-const StyledMenu = styled.div`
+const StyledMenu = styled.button`
   display: none;
 
   width: 3rem;

@@ -32,8 +32,8 @@ const GlobalStyles = createGlobalStyle`
   --color-red-700: #b91c1c;
   --color-red-800: #991b1b;
 
+  --bg-color: #111721;
   --color-opacity-100: rgba(255, 255, 255, 0.1);
-
   --backdrop-color: rgba(255, 255, 255, 0.1);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 &.dark-mode{
-  --color-grey-0: #111721;
+--color-grey-0: #111721;
 --color-grey-50: #111827;
 --color-grey-100: #1f2937;
 --color-grey-200: #374151;
@@ -130,8 +130,9 @@ html {
 body {
   font-family: 'Inconsolata', monospace;
   color: var(--color-grey-600);
-  background-color:var(--color-grey-0);
-  transition: color 0.3s, background-color 0.3s;
+  /* background-color:var(--color-grey-0); */
+  
+  transition: color 0.5s, background-color 0.4s;
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.6rem;
@@ -149,8 +150,15 @@ select {
 }
 
 button {
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
+
+a,button{
+  display: inline-block;
+}
+
 
 *:disabled {
   cursor: not-allowed;
