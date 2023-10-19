@@ -59,9 +59,11 @@ const StyledLink = styled(NavLink)`
   font-size: 2rem;
   font-weight: 500;
   padding-bottom: 0.5rem;
-
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
   &:hover,
   &:active {
+    transform: translateY(-5%);
     color: var(--color-brand-500);
     border-bottom: 1px solid var(--color-brand-500);
   }

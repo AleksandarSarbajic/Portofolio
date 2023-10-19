@@ -157,7 +157,7 @@ button {
   cursor: pointer;
 }
 
-a,button{
+a,button,img{
   display: inline-block;
 }
 

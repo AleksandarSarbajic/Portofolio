@@ -1,11 +1,30 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const headingAnimation = keyframes`
+0%{transform: translateX(-50%); opacity:0;}
+40%{opacity:0; }
+100%{ transform:translateX(0%)}
+`;
+const imageAnimation = keyframes`
+0%{ opacity:0;}
+40%{opacity:0; }
+100%{ opacity:1;}
+`;
 
 const StyledHero = styled.div`
-  padding: 10rem 0;
+  padding: 10rem 2rem;
   display: grid;
-  grid-template-columns: 50% 40%;
+  grid-template-columns: 55% 40%;
   align-items: center;
   justify-content: center;
+  gap: 3rem;
+
+  @media only screen and (max-width: 62.5em) {
+    padding: 10rem 1rem;
+  }
+  @media only screen and (max-width: 50em) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const StyledHeading = styled.h1`
@@ -14,8 +33,20 @@ const StyledHeading = styled.h1`
   line-height: 1.1;
   /* letter-spacing: 5px; */
   font-weight: 700;
+  animation: ${headingAnimation} 1s ease;
 
-  transition: all 1s;
+  transition: color 1s;
+  @media only screen and (max-width: 50em) {
+    text-align: center;
+    padding: 0 5%;
+  }
+  @media only screen and (max-width: 40em) {
+    padding: 0 1rem;
+  }
+  @media only screen and (max-width: 31em) {
+    padding: 0 1rem;
+    font-size: 5rem;
+  }
 `;
 
 const StyledSpan = styled.span`
@@ -41,6 +72,12 @@ const StyledSpan = styled.span`
 
 const StyledImage = styled.img`
   width: 100%;
+  animation: ${imageAnimation} 1.5s ease;
+
+  @media only screen and (max-width: 50em) {
+    width: 60%;
+    margin: 0 auto;
+  }
 `;
 
 function Hero() {
@@ -50,7 +87,7 @@ function Hero() {
         Hi there, I&apos;m Aleksandar. Front End{" "}
         <StyledSpan>Developer</StyledSpan>, crafting beautiful web applications.
       </StyledHeading>
-      <StyledImage src="/public/hero_image.webp"></StyledImage>
+      <StyledImage src="hero_image.webp"></StyledImage>
     </StyledHero>
   );
 }
