@@ -1,5 +1,5 @@
-import { createContext, useContext, useEffect } from "react";
-import { useLocalStorageState } from "../hooks/useLocalStorageState";
+import { createContext, useContext, useEffect, useState } from "react";
+// import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
 import styled, { css } from "styled-components";
 
@@ -28,6 +28,22 @@ const StyledColor = styled.div`
           transform: scale(0);
         `};
 `;
+
+function useLocalStorageState(initialState, key) {
+  const [value, setValue] = useState(function () {
+    const storedValue = localStorage.getItem(key);
+    return storedValue ? JSON.parse(storedValue) : initialState;
+  });
+
+  useEffect(
+    function () {
+      localStorage.setItem(key, JSON.stringify(value));
+    },
+    [value, key]
+  );
+
+  return [value, setValue];
+}
 
 const DarkModeContext = createContext();
 
