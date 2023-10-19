@@ -89,6 +89,7 @@ const GlobalStyles = createGlobalStyle`
  --color-brand-50: #eff6ff;
   --color-brand-100: #dbeafe;
   --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
   --color-brand-500: #3b82f6;
   --color-brand-600: #2563eb;
   --color-brand-700: #1d4ed8;
@@ -129,10 +130,11 @@ html {
 
 body {
   font-family: 'Inconsolata', monospace;
-  color: var(--color-grey-600);
-  /* background-color:var(--color-grey-0); */
+  color: var(--color-grey-800);
   
-  transition: color 0.5s, background-color 0.4s;
+  
+  transition: color 0.3s, background-color 0.4s;
+  transition-delay: 0.25s;
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.6rem;
