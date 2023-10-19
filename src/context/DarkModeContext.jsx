@@ -1,6 +1,8 @@
 import { createContext, useContext, useEffect } from "react";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
+
 import styled, { css } from "styled-components";
+
 const StyledColor = styled.div`
   height: 6rem;
   width: 6rem;
@@ -61,8 +63,8 @@ function DarkModeProvider({ children }) {
 
 function useDarkMode() {
   const context = useContext(DarkModeContext);
-  // if (context === undefined)
-  //   throw new Error("DarkmodeContext is used outside of DarkModeProvider");
+  if (context === undefined)
+    throw new Error("DarkmodeContext is used outside of DarkModeProvider");
   return context;
 }
 
