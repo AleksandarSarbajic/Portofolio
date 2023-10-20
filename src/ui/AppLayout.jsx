@@ -8,6 +8,7 @@ const Main = styled.main``;
 const Container = styled.div`
   max-width: 135rem;
   margin: 0 auto;
+  padding: 0 1rem;
 `;
 
 function AppLayout() {

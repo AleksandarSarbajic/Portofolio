@@ -12,7 +12,7 @@ const imageAnimation = keyframes`
 `;
 
 const StyledHero = styled.div`
-  padding: 10rem 2rem;
+  padding: 10rem 1rem;
   display: grid;
   grid-template-columns: 55% 40%;
   align-items: center;
@@ -20,7 +20,7 @@ const StyledHero = styled.div`
   gap: 3rem;
 
   @media only screen and (max-width: 62.5em) {
-    padding: 10rem 1rem;
+    padding: 10rem 0;
   }
   @media only screen and (max-width: 50em) {
     grid-template-columns: 1fr;
@@ -38,13 +38,12 @@ const StyledHeading = styled.h1`
   transition: color 1s;
   @media only screen and (max-width: 50em) {
     text-align: center;
-    padding: 0 5%;
+    padding: 0 3%;
   }
   @media only screen and (max-width: 40em) {
-    padding: 0 1rem;
+    padding: 0;
   }
   @media only screen and (max-width: 31em) {
-    padding: 0 1rem;
     font-size: 5rem;
   }
 `;

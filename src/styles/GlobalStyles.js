@@ -185,6 +185,10 @@ button:has(svg) {
   line-height: 0;
 }
 
+/* li:has(svg) {
+  line-height: 0;
+} */
+
 a {
   color: inherit;
   text-decoration: none;
