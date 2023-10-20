@@ -77,6 +77,9 @@ const StyledImage = styled.img`
     width: 60%;
     margin: 0 auto;
   }
+  @media only screen and (max-width: 26.5em) {
+    width: 75%;
+  }
 `;
 
 function Hero() {

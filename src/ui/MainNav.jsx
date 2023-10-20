@@ -4,7 +4,7 @@ import DarkModeToggle from "./DarkModeToggle";
 import { useState } from "react";
 
 const StyledNav = styled.nav`
-  padding: 1.5rem 5%;
+  padding: 3rem 5%;
   display: flex;
   align-items: center;
 `;
@@ -149,7 +149,7 @@ function MainNav() {
           </StyledLink>
         </li>
         <li>
-          <DarkModeToggle />
+          <DarkModeToggle onClick={() => setIsOpen((open) => !open)} />
         </li>
       </StyledList>
       <StyledMenu $active={isOpen} onClick={() => setIsOpen((open) => !open)}>

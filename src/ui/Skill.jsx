@@ -8,8 +8,14 @@ const StyledSkill = styled.li`
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-
+  transition: all 0.3s;
   color: var(--color-grey-900);
+
+  &:hover svg,
+  &:hover {
+    color: var(--color-brand-500);
+  }
+
   svg {
     font-size: 3rem;
     @media only screen and (max-width: 50em) {
