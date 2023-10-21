@@ -20,13 +20,11 @@ const StyledText = styled.p`
 `;
 
 const StyledBox = styled.div`
-  padding-left: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 0.45fr);
   justify-content: space-between;
   gap: 3rem 0;
   @media only screen and (max-width: 50em) {
-    padding: 0;
     grid-template-columns: 0.6fr;
     justify-content: center;
     text-align: center;

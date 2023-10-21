@@ -18,7 +18,7 @@ import { useInView } from "react-intersection-observer";
 import StyledHeading from "./Heading";
 import StyledHeadingBox from "./HeadingBox";
 const StyledSkills = styled.section`
-  margin: 12rem 0;
+  margin: 12.6rem 0;
   padding: 0 1rem;
   @media only screen and (max-width: 50em) {
     padding: 0;
@@ -28,7 +28,7 @@ const StyledSkills = styled.section`
 const StyledText = styled.p`
   font-size: 1.8rem;
   width: 50%;
-  padding-left: 3rem;
+
   line-height: 1.8;
 
   @media only screen and (max-width: 50em) {

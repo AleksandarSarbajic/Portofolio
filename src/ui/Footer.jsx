@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
-  padding: 1.5rem 5%;
+  padding: 2rem 5%;
   display: flex;
   @media only screen and (max-width: 40em) {
     flex-direction: column;

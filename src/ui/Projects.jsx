@@ -15,7 +15,7 @@ const StyledContainer = styled.section`
 const StyledDescription = styled.p`
   font-size: 1.8rem;
   width: 50%;
-  padding-left: 3rem;
+
   line-height: 1.8;
   margin-bottom: 5rem;
 
