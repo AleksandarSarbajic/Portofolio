@@ -1,6 +1,5 @@
-import { NetlifyForm } from "react-netlify-forms";
 import styled from "styled-components";
 
-const StyledForm = styled(NetlifyForm)``;
+const StyledForm = styled.form``;
 
 export default StyledForm;

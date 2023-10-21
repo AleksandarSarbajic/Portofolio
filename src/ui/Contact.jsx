@@ -19,12 +19,8 @@ function Contact() {
       <StyledText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </StyledText>
-      <StyledForm name="contact" data-netlify="true" method="POST">
-        <input
-          type="text"
-          id="fullName"
-          {...register("fullName", { required: "This field is required" })}
-        />
+      <StyledForm name="contact" data-netlify="true">
+        <input type="text" id="fullName" />
         <button>dasd</button>
       </StyledForm>
     </StyledContainer>
