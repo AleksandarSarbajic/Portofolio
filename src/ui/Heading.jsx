@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
 
 const StyledHeading = styled.h3`
+  display: inline-block;
   font-size: 4rem;
   line-height: 1;
   margin-bottom: 5rem;
-  padding-left: 3rem;
+
   transform: translateX(-6%);
   opacity: 0;
   visibility: hidden;
@@ -33,9 +34,9 @@ const StyledHeading = styled.h3`
         content: "";
         position: absolute;
         bottom: -1.5rem;
-        left: 2rem;
+        left: 0;
         height: 45%;
-        width: 18rem;
+        width: 100%;
         z-index: -1;
         opacity: 0.7;
         transform: scale(1.07, 1.05) skewX(-15deg);

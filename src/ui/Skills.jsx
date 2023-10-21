@@ -16,8 +16,13 @@ import {
 } from "react-icons/si";
 import { useInView } from "react-intersection-observer";
 import StyledHeading from "./Heading";
+import StyledHeadingBox from "./HeadingBox";
 const StyledSkills = styled.section`
   margin: 12rem 0;
+  padding: 0 1rem;
+  @media only screen and (max-width: 50em) {
+    padding: 0;
+  }
 `;
 
 const StyledText = styled.p`
@@ -90,9 +95,11 @@ function Skills() {
 
   return (
     <StyledSkills>
-      <StyledHeading $inView={headingInView} $aboutMe={true}>
-        My Skills
-      </StyledHeading>
+      <StyledHeadingBox>
+        <StyledHeading $inView={headingInView} $aboutMe={true}>
+          My Skills
+        </StyledHeading>
+      </StyledHeadingBox>
       <StyledText ref={headingRef}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
         amet animi beatae iure dolore ipsa architecto expedita vel, est magnam

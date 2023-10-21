@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import Project from "./Project";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
+import StyledHeadingBox from "./HeadingBox";
 const StyledContainer = styled.section`
   padding: 1rem;
   @media only screen and (max-width: 31em) {
@@ -77,9 +78,11 @@ function Projects() {
   });
   return (
     <StyledContainer>
-      <StyledHeading $inView={inViewHeading}>
-        What I&apos;ve been working on
-      </StyledHeading>
+      <StyledHeadingBox>
+        <StyledHeading $inView={inViewHeading}>
+          What I&apos;ve been working on
+        </StyledHeading>
+      </StyledHeadingBox>
       <StyledDescription ref={headingRef}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos iure
         consequatur, voluptatem ratione inventore similique sunt laborum

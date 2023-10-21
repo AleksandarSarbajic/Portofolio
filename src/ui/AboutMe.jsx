@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import StyledHeading from "./Heading";
 import { useInView } from "react-intersection-observer";
+import StyledHeadingBox from "./HeadingBox";
 
 const StyledContainer = styled.section`
   margin-top: 12rem;
+  padding: 0 1rem;
+  @media only screen and (max-width: 50em) {
+    padding: 0;
+  }
 `;
 
 const StyledText = styled.p`
@@ -42,9 +47,11 @@ function AboutMe() {
 
   return (
     <StyledContainer>
-      <StyledHeading $inView={headingInView} $aboutMe={true}>
-        About Me
-      </StyledHeading>
+      <StyledHeadingBox>
+        <StyledHeading $inView={headingInView} $aboutMe={true}>
+          About Me
+        </StyledHeading>
+      </StyledHeadingBox>
       <StyledBox ref={headingRef}>
         <StyledText>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
