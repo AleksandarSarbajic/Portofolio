@@ -89,7 +89,7 @@ function Projects() {
 
       <StyledBox>
         <Project>
-          <img src="/public/WildOasis.png" />
+          <img src="WildOasis.png" />
           <h4>The Wild Oasis</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
@@ -100,7 +100,7 @@ function Projects() {
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="/public/WildOasis.png" />
+          <img src="WildOasis.png" />
           <h4>The Wild Oasis</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
@@ -111,7 +111,7 @@ function Projects() {
           </StyledLink>
         </Project>
         <Project>
-          <img src="/public/WildOasis.png" />
+          <img src="WildOasis.png" />
           <h4>The Wild Oasis</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
@@ -122,7 +122,7 @@ function Projects() {
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="/public/WildOasis.png" />
+          <img src="WildOasis.png" />
           <h4>The Wild Oasis</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
