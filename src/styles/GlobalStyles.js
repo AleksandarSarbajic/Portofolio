@@ -190,6 +190,8 @@ button:has(svg) {
   line-height: 0;
 } */
 
+
+
 a {
   color: inherit;
   text-decoration: none;
@@ -201,6 +203,7 @@ ul {
 
 p {
   font-family: 'Lato', sans-serif;
+  font-weight: 500;
 }
 
 p,

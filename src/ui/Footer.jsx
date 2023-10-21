@@ -17,6 +17,7 @@ const StyledLogo = styled.h4`
   font-weight: 500;
   @media only screen and (max-width: 40em) {
     margin: 1rem 0;
+    text-align: center;
   }
 `;
 

@@ -1,5 +1,6 @@
 import AboutMe from "../ui/AboutMe";
 import Hero from "../ui/Hero";
+import Projects from "../ui/Projects";
 import Skills from "../ui/Skills";
 
 function Landingpage() {
@@ -8,6 +9,7 @@ function Landingpage() {
       <Hero />
       <AboutMe />
       <Skills />
+      <Projects />
     </>
   );
 }

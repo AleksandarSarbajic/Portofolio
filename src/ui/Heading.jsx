@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 const StyledHeading = styled.h3`
   font-size: 4rem;
+  line-height: 1;
   margin-bottom: 5rem;
   padding-left: 3rem;
   transform: translateX(-6%);

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import StyledHeading from "./Heading";
 import { useInView } from "react-intersection-observer";
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.section`
   margin-top: 12rem;
 `;
 
