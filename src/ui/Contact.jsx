@@ -19,7 +19,7 @@ function Contact() {
       <StyledText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </StyledText>
-      <StyledForm name="contact" data-netlify="true">
+      <StyledForm name="contact" data-netlify="true" method="POST">
         <input type="text" id="fullName" />
         <button>dasd</button>
       </StyledForm>
