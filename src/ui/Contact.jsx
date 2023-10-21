@@ -19,7 +19,8 @@ function Contact() {
       <StyledText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </StyledText>
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="Contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="Contact" />
         <p>
           <label>
             Your Name: <input type="text" name="name" />
