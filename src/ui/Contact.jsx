@@ -3,7 +3,7 @@ import StyledForm from "./Form";
 import StyledButton from "./Button";
 
 const StyledContainer = styled.section`
-  margin: 12.6rem 0;
+  margin: 12.6rem 0 15.6rem 0;
 `;
 
 const StyledHeading = styled.h4`

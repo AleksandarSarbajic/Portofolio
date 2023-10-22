@@ -4,6 +4,7 @@ import { Toaster } from "react-hot-toast";
 import AppLayout from "./ui/AppLayout";
 import { DarkModeProvider } from "./context/DarkModeContext";
 import Landingpage from "./pages/Landingpage";
+import RedirectPage from "./pages/RedirectPage";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Landingpage />,
+      },
+      {
+        path: "/redirect",
+        element: <RedirectPage />,
       },
     ],
   },
