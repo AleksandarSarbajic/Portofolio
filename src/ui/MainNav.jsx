@@ -1,12 +1,38 @@
 import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
 import DarkModeToggle from "./DarkModeToggle";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const StyledNav = styled.nav`
   padding: 3rem 5%;
   display: flex;
   align-items: center;
+  transition: all 0.4s;
+  ${(props) =>
+    props.$inView &&
+    css`
+      padding: 3rem 5%;
+      background-color: var(--color-grey-0);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      color: var(--color-grey-900);
+      box-shadow: var(--shadow-lg);
+    `}
+`;
+
+const StyledHidden = styled.div`
+  display: none;
+  content: " ";
+  ${(props) =>
+    props.$inView &&
+    css`
+      padding: 3rem 5%;
+      display: block;
+      height: 9.6rem;
+      width: 100%;
+    `}
 `;
 
 const StyledLogo = styled.h3`
@@ -112,50 +138,71 @@ const StyledMenu = styled.button`
 `;
 
 function MainNav() {
+  const [scrollY, setScrollY] = useState(0);
+
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <StyledNav>
-      <StyledLogo>Aleksandar Sarbajic</StyledLogo>
+  const onScroll = useCallback(() => {
+    const { pageYOffset } = window;
 
-      <StyledList $active={isOpen}>
-        <li>
-          <StyledLink onClick={() => setIsOpen((open) => !open)} to={"#home"}>
-            Home
-          </StyledLink>
-        </li>
-        <li>
-          <StyledLink
-            onClick={() => setIsOpen((open) => !open)}
-            to={"#aboutme"}
-          >
-            About me
-          </StyledLink>
-        </li>
-        <li>
-          <StyledLink
-            onClick={() => setIsOpen((open) => !open)}
-            to={"#projects"}
-          >
-            Projects
-          </StyledLink>
-        </li>
-        <li>
-          <StyledLink
-            onClick={() => setIsOpen((open) => !open)}
-            to={"#contact"}
-          >
-            Contact me
-          </StyledLink>
-        </li>
-        <li>
-          <DarkModeToggle onClick={() => setIsOpen((open) => !open)} />
-        </li>
-      </StyledList>
-      <StyledMenu $active={isOpen} onClick={() => setIsOpen((open) => !open)}>
-        <div></div>
-      </StyledMenu>
-    </StyledNav>
+    setScrollY(pageYOffset);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll, { passive: true });
+    };
+  }, [onScroll]);
+
+  console.log(scrollY);
+
+  return (
+    <>
+      <StyledHidden $inView={scrollY >= 750} />
+      <StyledNav $inView={scrollY >= 750}>
+        <StyledLogo>Aleksandar Sarbajic</StyledLogo>
+
+        <StyledList $active={isOpen}>
+          <li>
+            <StyledLink onClick={() => setIsOpen((open) => !open)} to={"/"}>
+              Home
+            </StyledLink>
+          </li>
+          <li>
+            <StyledLink
+              onClick={() => setIsOpen((open) => !open)}
+              to={"#aboutme"}
+            >
+              About me
+            </StyledLink>
+          </li>
+          <li>
+            <StyledLink
+              onClick={() => setIsOpen((open) => !open)}
+              to={"#projects"}
+            >
+              Projects
+            </StyledLink>
+          </li>
+          <li>
+            <StyledLink
+              onClick={() => setIsOpen((open) => !open)}
+              to={"#contact"}
+            >
+              Contact me
+            </StyledLink>
+          </li>
+          <li>
+            <DarkModeToggle onClick={() => setIsOpen((open) => !open)} />
+          </li>
+        </StyledList>
+        <StyledMenu $active={isOpen} onClick={() => setIsOpen((open) => !open)}>
+          <div></div>
+        </StyledMenu>
+      </StyledNav>
+    </>
   );
 }
 

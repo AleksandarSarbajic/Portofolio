@@ -81,7 +81,7 @@ function Contact() {
       <StyledText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </StyledText>
-      <StyledForm name="contact" method="post">
+      <StyledForm name="contact" method="post" action="/form">
         <StyledInput type="hidden" name="form-name" value="contact" />
         <StyledRow>
           <StyledBox>
