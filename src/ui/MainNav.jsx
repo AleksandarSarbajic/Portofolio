@@ -35,10 +35,18 @@ const StyledHidden = styled.div`
     `}
 `;
 
-const StyledLogo = styled.h3`
-  font-size: 2.4rem;
-  margin-right: auto;
-  font-weight: 600;
+const StyledLogo = styled(NavLink)`
+  &:visited,
+  &:link {
+    font-size: 2.4rem;
+    margin-right: auto;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  &:hover,
+  &:active {
+    color: var(--color-brand-500);
+  }
 `;
 
 const StyledList = styled.ul`
@@ -156,13 +164,11 @@ function MainNav() {
     };
   }, [onScroll]);
 
-  console.log(scrollY);
-
   return (
     <>
       <StyledHidden $inView={scrollY >= 750} />
       <StyledNav $inView={scrollY >= 750}>
-        <StyledLogo>Aleksandar Sarbajic</StyledLogo>
+        <StyledLogo to={"/"}>Aleksandar Sarbajic</StyledLogo>
 
         <StyledList $active={isOpen}>
           <li>

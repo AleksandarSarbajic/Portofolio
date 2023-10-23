@@ -14,13 +14,13 @@ const Container = styled.div`
 function AppLayout() {
   return (
     <>
+      <MainNav />
       <Main>
-        <MainNav />
         <Container>
           <Outlet />
         </Container>
-        <Footer />
       </Main>
+      <Footer />
     </>
   );
 }

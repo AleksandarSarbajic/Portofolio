@@ -65,7 +65,8 @@ const StyledTextArea = styled.textarea`
   padding: 0.8rem 1.5rem;
   color: var(--color-black-100);
   min-height: 10rem;
-  height: 15rem;
+  min-width: 50%;
+  height: 20rem;
   &::placeholder {
     font-size: 1.6rem;
     font-weight: 500;
@@ -81,7 +82,7 @@ function Contact() {
       <StyledText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </StyledText>
-      <StyledForm name="contact" method="post" action="/form">
+      <StyledForm name="contact" method="post" action="/redirect">
         <StyledInput type="hidden" name="form-name" value="contact" />
         <StyledRow>
           <StyledBox>

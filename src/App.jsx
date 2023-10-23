@@ -5,21 +5,28 @@ import AppLayout from "./ui/AppLayout";
 import { DarkModeProvider } from "./context/DarkModeContext";
 import Landingpage from "./pages/Landingpage";
 import RedirectPage from "./pages/RedirectPage";
+import WildOasis from "./pages/WildOasis";
+import ErrorPage from "./ui/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
         element: <Landingpage />,
       },
       {
-        path: "/redirect",
-        element: <RedirectPage />,
+        path: "/es1",
+        element: <WildOasis />,
       },
     ],
+  },
+  {
+    path: "/redirect",
+    element: <RedirectPage />,
   },
 ]);
 

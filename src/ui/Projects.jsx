@@ -2,9 +2,12 @@ import styled from "styled-components";
 import StyledHeading from "./Heading";
 import { useInView } from "react-intersection-observer";
 import Project from "./Project";
-import { Link } from "react-router-dom";
+
 import { BsArrowRight } from "react-icons/bs";
 import StyledHeadingBox from "./HeadingBox";
+import StyledLink from "./StyledLink";
+import ProjectBox from "./ProjectsBox";
+
 const StyledContainer = styled.section`
   padding: 1rem;
   @media only screen and (max-width: 31em) {
@@ -33,44 +36,6 @@ const StyledDescription = styled.p`
   }
 `;
 
-const StyledBox = styled.div`
-  margin-top: 5rem;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0%, 1fr));
-  gap: 10rem 15rem;
-  @media only screen and (max-width: 62.5em) {
-    gap: 10rem;
-  }
-  @media only screen and (max-width: 50em) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const StyledLink = styled(Link)`
-  &:visited,
-  &:link {
-    font-size: 2rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    transition: all 0.4s;
-  }
-  &:hover,
-  &:active {
-    color: var(--color-brand-600);
-  }
-  &:hover svg {
-    color: var(--color-brand-600);
-    transform: translateX(35%);
-  }
-  svg {
-    font-size: 2.8rem;
-    transition: all 0.4s;
-  }
-`;
-
 function Projects() {
   const { inView: inViewHeading, ref: headingRef } = useInView({
     threshold: 1,
@@ -90,7 +55,7 @@ function Projects() {
         dolorem officiis odit nemo quam.
       </StyledDescription>
 
-      <StyledBox>
+      <ProjectBox>
         <Project>
           <img src="WildOasis.png" />
           <h4>The Wild Oasis</h4>
@@ -98,7 +63,7 @@ function Projects() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
             cupiditate consectetur sint nostrum numquam veniam!
           </p>
-          <StyledLink to={"/"}>
+          <StyledLink to={"/es1"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
@@ -135,7 +100,7 @@ function Projects() {
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
-      </StyledBox>
+      </ProjectBox>
     </StyledContainer>
   );
 }
