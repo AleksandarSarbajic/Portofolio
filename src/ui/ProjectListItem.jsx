@@ -6,6 +6,13 @@ const StyledLi = styled.li`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+
+  ${(props) =>
+    props.$blue &&
+    css`
+      color: var(--color-blue-700);
+    `}
+
   ${(props) =>
     props.$heading &&
     css`

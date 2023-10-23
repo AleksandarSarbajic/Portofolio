@@ -1,16 +1,19 @@
 import { useInView } from "react-intersection-observer";
 import styled, { css } from "styled-components";
 
-const StyledProjectImg = styled.img`
-  box-shadow: var(--shadow-img);
-  border-radius: var(--border-radius-lg);
-  width: 100%;
-
+const StyledImg = styled.img`
   transform: translateY(5%);
 
   opacity: 0;
   visibility: hidden;
   transition: all 1s;
+
+  ${(props) =>
+    props.$delay &&
+    css`
+      transition: all 1s linear 0.3s;
+    `}
+
   ${(props) =>
     props.$inView &&
     css`
@@ -20,13 +23,15 @@ const StyledProjectImg = styled.img`
     `}
 `;
 
-function StyledProjectImage({ src, alt }) {
+function StyledBoxImage({ src, alt, delay }) {
   const { inView, ref } = useInView({
     threshold: 0.7,
     triggerOnce: true,
   });
 
-  return <StyledProjectImg $inView={inView} ref={ref} src={src} alt={alt} />;
+  return (
+    <StyledImg $delay={delay} $inView={inView} ref={ref} src={src} alt={alt} />
+  );
 }
 
-export default StyledProjectImage;
+export default StyledBoxImage;

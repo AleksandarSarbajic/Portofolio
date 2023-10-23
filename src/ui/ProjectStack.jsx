@@ -10,6 +10,11 @@ const StyledStack = styled.ul`
   align-items: center;
   gap: 2.5rem;
   /* margin: 0 15%; */
+
+  @media only screen and (max-width: 50em) {
+    grid-row: 2 / 3;
+    margin: 10rem 0 0 0;
+  }
 `;
 
 export default StyledStack;

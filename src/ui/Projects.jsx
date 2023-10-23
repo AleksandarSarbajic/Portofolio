@@ -74,7 +74,7 @@ function Projects() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
             cupiditate consectetur sint nostrum numquam veniam!
           </p>
-          <StyledLink to={"/"}>
+          <StyledLink to={"/es2"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>

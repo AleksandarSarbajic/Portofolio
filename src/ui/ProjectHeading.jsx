@@ -16,6 +16,10 @@ const StyledProjectHeading = styled.h2`
       margin-top: 0rem;
       margin-bottom: 5rem;
       font-size: 3.4rem;
+      display: block;
+      @media only screen and (max-width: 31em) {
+        text-align: center;
+      }
     `}
 
   ${(props) =>
@@ -26,8 +30,13 @@ const StyledProjectHeading = styled.h2`
   ${(props) =>
     props.$medium &&
     css`
+      display: block;
       margin-top: 20rem;
+      margin-bottom: 10rem;
       font-size: 4.4rem;
+      @media only screen and (max-width: 31em) {
+        text-align: center;
+      }
     `}
 
 

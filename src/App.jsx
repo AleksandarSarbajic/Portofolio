@@ -7,6 +7,7 @@ import Landingpage from "./pages/Landingpage";
 import RedirectPage from "./pages/RedirectPage";
 import WildOasis from "./pages/WildOasis";
 import ErrorPage from "./ui/ErrorPage";
+import TastyTrail from "./pages/TastyTrail";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/es1",
         element: <WildOasis />,
+      },
+      {
+        path: "/es2",
+        element: <TastyTrail />,
       },
     ],
   },

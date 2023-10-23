@@ -25,16 +25,15 @@ import ProjectBox from "../ui/ProjectsBox";
 import Contact from "../ui/Contact";
 import StyledHeadingBox from "../ui/HeadingBox";
 import useScrollTo from "../hooks/UseScrollTo";
-import StyledBoxImage from "../ui/StyledBoxImage";
 
-function WildOasis() {
+function TastyTrail() {
   useScrollTo();
 
   return (
     <>
       <ProjectHeader>
         <StyledHeadingBox $project>
-          <StyledProjectHeading>The Wild Oasis</StyledProjectHeading>
+          <StyledProjectHeading>TastyTrail</StyledProjectHeading>
         </StyledHeadingBox>
         <StyledSubHeading>
           The Wild Oasis is a React Project application build for hotel service.
@@ -66,7 +65,7 @@ function WildOasis() {
           <ProjectListItem>
             <SiSupabase /> Supabase
           </ProjectListItem>
-          <ProjectListItem $blue>
+          <ProjectListItem>
             <SiNetlify /> Netlify
           </ProjectListItem>
         </StyledList>
@@ -99,22 +98,22 @@ function WildOasis() {
       </StyledSubHeading>
       <StyledProjectBox>
         <StyledStack>
-          <StyledStackItem $blue>
+          <StyledStackItem>
             <SiReact /> React
           </StyledStackItem>
-          <StyledStackItem $red>
+          <StyledStackItem>
             <SiReactquery /> React Query
           </StyledStackItem>
-          <StyledStackItem $pink>
+          <StyledStackItem>
             <SiStyledcomponents /> Styled Components
           </StyledStackItem>
-          <StyledStackItem $blue>
+          <StyledStackItem>
             <SiReacthookform /> React Hook Form
           </StyledStackItem>
-          <StyledStackItem $green>
+          <StyledStackItem>
             <SiSupabase /> Supabase
           </StyledStackItem>
-          <StyledStackItem $blue>
+          <StyledStackItem>
             <SiNetlify /> Netlify
           </StyledStackItem>
         </StyledStack>
@@ -138,10 +137,10 @@ function WildOasis() {
         </div>
       </StyledProjectBox>
       <StyledImageBox>
-        <StyledBoxImage src="bookings.png" alt="" />
-        <StyledBoxImage src="cabins.png" alt="" delay={true} />
-        <StyledBoxImage src="createuser.png" alt="" />
-        <StyledBoxImage src="settings.png" alt="" delay={true} />
+        <img src="bookings.png" alt="" />
+        <img src="cabins.png" alt="" />
+        <img src="createuser.png" alt="" />
+        <img src="settings.png" alt="" />
       </StyledImageBox>
       <StyledProjectBox>
         <div></div>
@@ -195,7 +194,7 @@ function WildOasis() {
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
-        <Project time={true}>
+        <Project>
           <img src="WildOasis.png" />
           <h4>The Wild Oasis</h4>
           <p>
@@ -212,4 +211,4 @@ function WildOasis() {
   );
 }
 
-export default WildOasis;
+export default TastyTrail;
