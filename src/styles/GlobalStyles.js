@@ -104,8 +104,10 @@ const GlobalStyles = createGlobalStyle`
   --color-brand-900: #1e3a8a;
 
   --color-pink-400: #e879f9;
+  --color-pink-700: #7e22ce;
   --color-green-100: #dcfce7;
   --color-green-700: #15803d;
+  --color-orange-400: #fb923c;
 
   --border-radius-tiny: 3px;
   --border-radius-sm: 5px;

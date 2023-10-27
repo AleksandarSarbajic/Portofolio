@@ -1,10 +1,10 @@
 import {
+  SiCss3,
   SiFirebase,
+  SiLeaflet,
   SiNetlify,
   SiReact,
   SiReactrouter,
-  SiRedux,
-  SiSass,
 } from "react-icons/si";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -27,27 +27,27 @@ import StyledHeadingBox from "../ui/HeadingBox";
 import useScrollTo from "../hooks/UseScrollTo";
 import StyledBoxImage from "../ui/StyledBoxImage";
 
-function TastyTrail() {
-  useScrollTo();
+function WorldWise() {
+  // useScrollTo();
 
   return (
     <>
       <ProjectHeader>
         <StyledHeadingBox $project>
-          <StyledProjectHeading>Tasty Trail</StyledProjectHeading>
+          <StyledProjectHeading>WorldWise</StyledProjectHeading>
         </StyledHeadingBox>
         <StyledSubHeading>
-          The Wild Oasis is a React Project application build for hotel service.
-          I built this project in React Course with React, Supabase and more.
-          This application includes a lot of connections with Supabase so
-          everyone can have the same overall experience as well to stay updated
-          about customers.
+          WorldWise app is a travel tracking and adventure registration
+          application. Its main purpose is to allow users to register and keep
+          track of the places they have traveled to, providing them with a
+          visual representation of their adventures on a map.
         </StyledSubHeading>
       </ProjectHeader>
       <ProjectListContainer>
         <StyledList>
           <ProjectListItem heading={true}>Type</ProjectListItem>
           <ProjectListItem>Course</ProjectListItem>
+          <ProjectListItem>Desktop only</ProjectListItem>
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Stack</ProjectListItem>
@@ -55,13 +55,13 @@ function TastyTrail() {
             <SiReact /> React
           </ProjectListItem>
           <ProjectListItem>
-            <SiRedux /> Redux Toolkit
+            <SiCss3 /> Css
+          </ProjectListItem>
+          <ProjectListItem>
+            <SiLeaflet /> Leaflet
           </ProjectListItem>
           <ProjectListItem>
             <SiReactrouter /> Reactrouter
-          </ProjectListItem>
-          <ProjectListItem>
-            <SiSass /> Sass
           </ProjectListItem>
           <ProjectListItem>
             <SiFirebase /> Firebase
@@ -72,44 +72,49 @@ function TastyTrail() {
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Links</ProjectListItem>
-          <ProjectListItem link={"https://tasty-trial.netlify.app/"}>
+          <ProjectListItem link={"https://world-wise-aleksandar.netlify.app/"}>
             Live
           </ProjectListItem>
           <ProjectListItem
-            link={"https://github.com/AleksandarSarbajic/Tasty-Trail"}
+            link={"https://github.com/AleksandarSarbajic/WorldWise"}
           >
             GitHub
           </ProjectListItem>
         </StyledList>
       </ProjectListContainer>
       <StyledProjectImage
-        src="TastyTrail.webp"
-        alt="Screenshot of the Tasty Trail page"
+        src="WorldLanding.webp"
+        alt="Screenshot of the WorldWise page"
       />
 
       <StyledProjectHeading $small $margin>
         Project Purpose and Goal
       </StyledProjectHeading>
       <StyledSubHeading>
-        The Wild Oasis is a React Project application build for hotel service. I
-        built this project in React Course with React, Supabase and more. This
-        application includes a lot of connections with Supabase so everyone can
-        have the same overall experience as well to stay updated about
-        customers.
+        This project included the following 3 phases and iterations of the site.
+        Phase 1 is simply letting users log in to application. Phase 2 is larger
+        and more complex, as it includes a whole world map and markers on it..
+        Phase 3 is the most complex out of all phases, including placing marker
+        on map, storing data about markers and a city that connect to it.
+      </StyledSubHeading>
+      <StyledSubHeading $space>
+        The most effective approach I found to implement these 3 phases is to
+        create a realtime database for it so it can keep a track of everything,
+        while displaying data on the map.
       </StyledSubHeading>
       <StyledProjectBox>
         <StyledStack>
           <StyledStackItem $blue>
             <SiReact /> React
           </StyledStackItem>
-          <StyledStackItem $purple>
-            <SiRedux /> Redux Toolkit
+          <StyledStackItem $blue>
+            <SiCss3 /> Css
           </StyledStackItem>
           <StyledStackItem $red>
             <SiReactrouter /> Reactrouter
           </StyledStackItem>
-          <StyledStackItem $pink>
-            <SiSass /> Sass
+          <StyledStackItem $green>
+            <SiLeaflet /> Leaflet
           </StyledStackItem>
           <StyledStackItem $orange>
             <SiFirebase /> Firebase
@@ -123,27 +128,27 @@ function TastyTrail() {
             Web Stack and Explanation
           </StyledProjectHeading>
           <StyledSubHeading $big>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more. This application includes a lot of connections with
-            Supabase so everyone can have the same overall experience as well to
-            stay updated about customers.
+            React made the most sense for this web application because it&apos;s
+            very simple to use Leaflet with react hooks. Firebase was chosen
+            because the data manipulation wasn&apos;t that complex because we
+            were just adding and using data.
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more.
+            React hooks are used for form submission and filtering cities&apos;
+            data to a number of countries. Leaflet is used for providing the map
+            and putting markers on the map.Netlify is also an obvious choice for
+            deployment because of its speed and reliability.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
       <StyledImageBox>
-        <StyledBoxImage src="TastyDiscovery.webp" alt="" />
-        <StyledBoxImage src="restaurantPage.webp" alt="" delay={true} />
-        <StyledBoxImage src="restaurant.webp" alt="" />
-        <StyledBoxImage src="TastyCart.webp" alt="" delay={true} />
-        <StyledBoxImage src="TastySearch.webp" alt="" />
-        <StyledBoxImage src="TastySearchPage.webp" alt="" delay={true} />
+        <StyledBoxImage src="WorldMap.webp" alt="" />
+        <StyledBoxImage src="WorldCity.webp" alt="" delay={true} />
+        <StyledBoxImage src="WorldCountries.webp" alt="" />
+        <StyledBoxImage src="WorldLogIn.webp" alt="" delay={true} />
+        <StyledBoxImage src="WorldPricing.webp" alt="" />
+        <StyledBoxImage src="WorldAbout.webp" alt="" delay={true} />
       </StyledImageBox>
       <StyledProjectBox>
         <div></div>
@@ -152,23 +157,16 @@ function TastyTrail() {
             Problems and Thought Process
           </StyledProjectHeading>
           <StyledSubHeading $big>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more. This application includes a lot of connections with
-            Supabase so everyone can have the same overall experience as well to
-            stay updated about customers.
-          </StyledSubHeading>
-
-          <StyledSubHeading $big $space>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more.
+            Like most projects, there is always some problem on your journey,
+            the most difficult area was using Leafleft and gathering data from
+            the map. After understanding Leafleft, everything went fast and
+            easy.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
 
       <StyledProjectImage
-        src="TastyAddToCart.webp"
+        src="WorldAdd.webp"
         alt="Screenshot of the WildOasis page"
       />
 
@@ -176,11 +174,10 @@ function TastyTrail() {
         Lessons Learned
       </StyledProjectHeading>
       <StyledSubHeading>
-        The Wild Oasis is a React Project application build for hotel service. I
-        built this project in React Course with React, Supabase and more. This
-        application includes a lot of connections with Supabase so everyone can
-        have the same overall experience as well to stay updated about
-        customers.
+        I could spend all day describing the lessons that I learned while
+        working on this project, but the most important ones involved in my
+        newfound understanding of React Hooks, FireBase, and the most important
+        Leaflet that helped me understand how to work with Maps.
       </StyledSubHeading>
       <StyledProjectHeading $medium $margin>
         Other Projects
@@ -198,13 +195,13 @@ function TastyTrail() {
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="WorldLanding.webp" />
-          <h4>WorldWise</h4>
+          <img src="TastyTrail.webp" />
+          <h4>Tasty Trail</h4>
           <p>
-            WorldWise is a React application that allows users to explore cities
-            from around the world.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            cupiditate consectetur sint nostrum numquam veniam!
           </p>
-          <StyledLink to={"/es3"}>
+          <StyledLink to={"/es2"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
@@ -214,4 +211,4 @@ function TastyTrail() {
   );
 }
 
-export default TastyTrail;
+export default WorldWise;

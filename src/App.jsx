@@ -8,6 +8,8 @@ import RedirectPage from "./pages/RedirectPage";
 import WildOasis from "./pages/WildOasis";
 import ErrorPage from "./ui/ErrorPage";
 import TastyTrail from "./pages/TastyTrail";
+import CreckFlix from "./pages/Creckflix";
+import WorldWise from "./pages/WorldWise";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
       {
         path: "/es2",
         element: <TastyTrail />,
+      },
+      {
+        path: "/es3",
+        element: <WorldWise />,
+      },
+      {
+        path: "/es4",
+        element: <CreckFlix />,
       },
     ],
   },

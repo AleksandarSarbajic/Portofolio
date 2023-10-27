@@ -57,19 +57,19 @@ function Projects() {
 
       <ProjectBox>
         <Project>
-          <img src="WildOasis.png" />
+          <img src="WildOasis.webp" />
           <h4>The Wild Oasis</h4>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            cupiditate consectetur sint nostrum numquam veniam!
+            The Wild Oasis is a user friendly hotel management application. That
+            helps employees menage everything about hotel data.
           </p>
           <StyledLink to={"/es1"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="WildOasis.png" />
-          <h4>The Wild Oasis</h4>
+          <img src="TastyTrail.webp" />
+          <h4>Tasty Trail</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
             cupiditate consectetur sint nostrum numquam veniam!
@@ -79,24 +79,24 @@ function Projects() {
           </StyledLink>
         </Project>
         <Project>
-          <img src="WildOasis.png" />
-          <h4>The Wild Oasis</h4>
+          <img src="WorldLanding.webp" />
+          <h4>WorldWise</h4>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            cupiditate consectetur sint nostrum numquam veniam!
+            WorldWise is a React application that allows users to explore cities
+            from around the world.
           </p>
-          <StyledLink to={"/"}>
+          <StyledLink to={"/es3"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="WildOasis.png" />
-          <h4>The Wild Oasis</h4>
+          <img src="FlixMovies.webp" />
+          <h4>CreckFlix</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
             cupiditate consectetur sint nostrum numquam veniam!
           </p>
-          <StyledLink to={"/"}>
+          <StyledLink to={"/es4"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>

@@ -28,7 +28,7 @@ import useScrollTo from "../hooks/UseScrollTo";
 import StyledBoxImage from "../ui/StyledBoxImage";
 
 function WildOasis() {
-  useScrollTo();
+  // useScrollTo();
 
   return (
     <>
@@ -83,7 +83,7 @@ function WildOasis() {
         </StyledList>
       </ProjectListContainer>
       <StyledProjectImage
-        src="WildOasis.png"
+        src="WildOasis.webp"
         alt="Screenshot of the WildOasis page"
       />
 
@@ -91,11 +91,22 @@ function WildOasis() {
         Project Purpose and Goal
       </StyledProjectHeading>
       <StyledSubHeading>
-        The Wild Oasis is a React Project application build for hotel service. I
-        built this project in React Course with React, Supabase and more. This
-        application includes a lot of connections with Supabase so everyone can
-        have the same overall experience as well to stay updated about
-        customers.
+        This project included the following 5 phases and iterations of the site.
+        Phase 1 is simply the cabins page where employee can see all the info
+        about a specific cabin, sort the cabins, edit and add a new cabin. Phase
+        2 is by far the largest and the most complex, as it includes all booking
+        information and all functions so the employee can edit them. Phase 3 is
+        all about overall UX, where employees can set their settings, create
+        other user account and update their own account. Phase 4 is the second
+        largest phase, where we created the beautiful dashboard about all
+        information that&apos;s happening. And the last phase 5 is about
+        enabling login, logout and beautiful dark mode.
+      </StyledSubHeading>
+      <StyledSubHeading $space>
+        The most effective approach we found to implement these 5 phases is to
+        create a distinct page first, and then add the global states and login
+        functions. This way dashboard information was rendered conditionally
+        with bookings being updated.
       </StyledSubHeading>
       <StyledProjectBox>
         <StyledStack>
@@ -123,25 +134,28 @@ function WildOasis() {
             Web Stack and Explanation
           </StyledProjectHeading>
           <StyledSubHeading $big>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more. This application includes a lot of connections with
-            Supabase so everyone can have the same overall experience as well to
-            stay updated about customers.
+            React made the most sense for this web application because it&apos;s
+            very simple to use Supabase in combination with ReactQuery which
+            provide very smooth experience. Supabase was chosen because of the
+            ability how easy it to connect to it and to add data that we need by
+            creating tables.
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more.
+            ReactQuery is used across the entire project to provide the fastest
+            performance, because we can store stale data in it and as we go to
+            the same page that is using that data loading will be significantly
+            faster. Reach Hook Form came first in mind for using the forms,
+            because how fast and easy you can work with it. Netlify is also an
+            obvious choice for deployment because of its speed and reliability.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
       <StyledImageBox>
-        <StyledBoxImage src="bookings.png" alt="" />
-        <StyledBoxImage src="cabins.png" alt="" delay={true} />
-        <StyledBoxImage src="createuser.png" alt="" />
-        <StyledBoxImage src="settings.png" alt="" delay={true} />
+        <StyledBoxImage src="bookings.webp" alt="" />
+        <StyledBoxImage src="cabins.webp" alt="" delay={true} />
+        <StyledBoxImage src="createuser.webp" alt="" />
+        <StyledBoxImage src="settings.webp" alt="" delay={true} />
       </StyledImageBox>
       <StyledProjectBox>
         <div></div>
@@ -150,23 +164,25 @@ function WildOasis() {
             Problems and Thought Process
           </StyledProjectHeading>
           <StyledSubHeading $big>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more. This application includes a lot of connections with
-            Supabase so everyone can have the same overall experience as well to
-            stay updated about customers.
+            Like most projects, there is always some problem on your journey,
+            the most difficult area was the organization of the data and loading
+            the same data as fast as possible so our app doesn&apos;t get slow.
+            I realized how important maintaining the speed of data flow is
+            important.
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more.
+            As well for the application the be the fastest as possible I was
+            making components as reusable as possible and utilized props for as
+            many components. That&apos; why i used styled components, because
+            the structure of CSS in JS is much easier to use, especially because
+            styled components uses their own props to.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
 
       <StyledProjectImage
-        src="checkin.png"
+        src="checkin.webp"
         alt="Screenshot of the WildOasis page"
       />
 
@@ -174,35 +190,38 @@ function WildOasis() {
         Lessons Learned
       </StyledProjectHeading>
       <StyledSubHeading>
-        The Wild Oasis is a React Project application build for hotel service. I
-        built this project in React Course with React, Supabase and more. This
-        application includes a lot of connections with Supabase so everyone can
-        have the same overall experience as well to stay updated about
-        customers.
+        I could spend all day describing the lessons that I learned while
+        working on this project, but the most important ones involved in my
+        newfound understanding of React Hooks, Supabase, ReactQuery and Styled
+        components. As my first large project using React, I learned a lot of
+        data structure and code organization. When I first began, I was confused
+        about ReactQuery and Supabase tables, but as soon as I understood how it
+        works, everything went really well. With a lot of refactoring code and
+        resolving issues, for better readability and fewer late night problems.
       </StyledSubHeading>
       <StyledProjectHeading $medium $margin>
         Other Projects
       </StyledProjectHeading>
       <ProjectBox $margin>
         <Project>
-          <img src="WildOasis.png" />
-          <h4>The Wild Oasis</h4>
+          <img src="TastyTrail.webp" />
+          <h4>Tasty Trail</h4>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
             cupiditate consectetur sint nostrum numquam veniam!
           </p>
-          <StyledLink to={"/es1"}>
+          <StyledLink to={"/es2"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="WildOasis.png" />
-          <h4>The Wild Oasis</h4>
+          <img src="WorldLanding.webp" />
+          <h4>WorldWise</h4>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            cupiditate consectetur sint nostrum numquam veniam!
+            WorldWise is a React application that allows users to explore cities
+            from around the world.
           </p>
-          <StyledLink to={"/es1"}>
+          <StyledLink to={"/es3"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>

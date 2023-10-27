@@ -1,10 +1,9 @@
 import {
-  SiFirebase,
-  SiNetlify,
-  SiReact,
-  SiReactrouter,
-  SiRedux,
-  SiSass,
+  SiCss3,
+  SiMongodb,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiVercel,
 } from "react-icons/si";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -27,14 +26,14 @@ import StyledHeadingBox from "../ui/HeadingBox";
 import useScrollTo from "../hooks/UseScrollTo";
 import StyledBoxImage from "../ui/StyledBoxImage";
 
-function TastyTrail() {
+function CreckFlix() {
   useScrollTo();
 
   return (
     <>
       <ProjectHeader>
         <StyledHeadingBox $project>
-          <StyledProjectHeading>Tasty Trail</StyledProjectHeading>
+          <StyledProjectHeading>CreckFlix</StyledProjectHeading>
         </StyledHeadingBox>
         <StyledSubHeading>
           The Wild Oasis is a React Project application build for hotel service.
@@ -52,39 +51,36 @@ function TastyTrail() {
         <StyledList>
           <ProjectListItem heading={true}>Stack</ProjectListItem>
           <ProjectListItem>
-            <SiReact /> React
+            <SiNextdotjs /> NextJS
           </ProjectListItem>
           <ProjectListItem>
-            <SiRedux /> Redux Toolkit
+            <SiCss3 /> Css
           </ProjectListItem>
           <ProjectListItem>
-            <SiReactrouter /> Reactrouter
+            <SiNodedotjs /> NodeJS
           </ProjectListItem>
           <ProjectListItem>
-            <SiSass /> Sass
+            <SiMongodb /> Mongodb
           </ProjectListItem>
           <ProjectListItem>
-            <SiFirebase /> Firebase
-          </ProjectListItem>
-          <ProjectListItem>
-            <SiNetlify /> Netlify
+            <SiVercel /> Vercel
           </ProjectListItem>
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Links</ProjectListItem>
-          <ProjectListItem link={"https://tasty-trial.netlify.app/"}>
+          <ProjectListItem link={"https://creckflix.vercel.app/"}>
             Live
           </ProjectListItem>
           <ProjectListItem
-            link={"https://github.com/AleksandarSarbajic/Tasty-Trail"}
+            link={"https://github.com/AleksandarSarbajic/creckflix"}
           >
             GitHub
           </ProjectListItem>
         </StyledList>
       </ProjectListContainer>
       <StyledProjectImage
-        src="TastyTrail.webp"
-        alt="Screenshot of the Tasty Trail page"
+        src="FlixMovies.webp"
+        alt="Screenshot of the Creckflix page"
       />
 
       <StyledProjectHeading $small $margin>
@@ -99,23 +95,20 @@ function TastyTrail() {
       </StyledSubHeading>
       <StyledProjectBox>
         <StyledStack>
-          <StyledStackItem $blue>
-            <SiReact /> React
-          </StyledStackItem>
-          <StyledStackItem $purple>
-            <SiRedux /> Redux Toolkit
-          </StyledStackItem>
-          <StyledStackItem $red>
-            <SiReactrouter /> Reactrouter
-          </StyledStackItem>
-          <StyledStackItem $pink>
-            <SiSass /> Sass
-          </StyledStackItem>
-          <StyledStackItem $orange>
-            <SiFirebase /> Firebase
+          <StyledStackItem>
+            <SiNextdotjs /> NextJS
           </StyledStackItem>
           <StyledStackItem $blue>
-            <SiNetlify /> Netlify
+            <SiCss3 /> Css
+          </StyledStackItem>
+          <StyledStackItem $green>
+            <SiNodedotjs /> NodeJS
+          </StyledStackItem>
+          <StyledStackItem $green>
+            <SiMongodb /> Mongodb
+          </StyledStackItem>
+          <StyledStackItem>
+            <SiVercel /> Vercel
           </StyledStackItem>
         </StyledStack>
         <div>
@@ -138,12 +131,12 @@ function TastyTrail() {
         </div>
       </StyledProjectBox>
       <StyledImageBox>
-        <StyledBoxImage src="TastyDiscovery.webp" alt="" />
-        <StyledBoxImage src="restaurantPage.webp" alt="" delay={true} />
-        <StyledBoxImage src="restaurant.webp" alt="" />
-        <StyledBoxImage src="TastyCart.webp" alt="" delay={true} />
-        <StyledBoxImage src="TastySearch.webp" alt="" />
-        <StyledBoxImage src="TastySearchPage.webp" alt="" delay={true} />
+        <StyledBoxImage src="FlixDetails.webp" alt="" />
+        <StyledBoxImage src="FlixSearch.webp" alt="" delay={true} />
+        <StyledBoxImage src="FlixSignUp.webp" alt="" />
+        <StyledBoxImage src="FlixLogIn.webp" alt="" delay={true} />
+        <StyledBoxImage src="FlixLandingPage.webp" alt="" />
+        <StyledBoxImage src="FlixAccount.webp" alt="" delay={true} />
       </StyledImageBox>
       <StyledProjectBox>
         <div></div>
@@ -198,13 +191,13 @@ function TastyTrail() {
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="WorldLanding.webp" />
-          <h4>WorldWise</h4>
+          <img src="TastyTrail.webp" />
+          <h4>Tasty Trail</h4>
           <p>
-            WorldWise is a React application that allows users to explore cities
-            from around the world.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            cupiditate consectetur sint nostrum numquam veniam!
           </p>
-          <StyledLink to={"/es3"}>
+          <StyledLink to={"/es2"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
@@ -214,4 +207,4 @@ function TastyTrail() {
   );
 }
 
-export default TastyTrail;
+export default CreckFlix;
