@@ -2,9 +2,13 @@ import styled from "styled-components";
 import StyledHeading from "./Heading";
 import { useInView } from "react-intersection-observer";
 import StyledHeadingBox from "./HeadingBox";
+import useScrollTo from "../hooks/UseScrollTo";
+
+import { useIsInView } from "../context/IsInViewContext";
+import { useEffect } from "react";
 
 const StyledContainer = styled.section`
-  margin-top: 12rem;
+  margin-bottom: 15.6rem;
   padding: 0 1rem;
   @media only screen and (max-width: 50em) {
     padding: 0;
@@ -38,14 +42,29 @@ const StyledBox = styled.div`
 `;
 
 function AboutMe() {
+  const { ref: intRef, inView: intInView } = useInView();
+
+  const { setSectionHandler } = useIsInView();
+
+  useEffect(() => {
+    if (intInView) {
+      setSectionHandler("#aboutme");
+    }
+  }, [intInView, setSectionHandler]);
+
+  const { ref: containerRef } = useScrollTo({
+    hash: "#aboutme",
+    scrollTo: "center",
+  });
+
   const { ref: headingRef, inView: headingInView } = useInView({
     threshold: 1,
     triggerOnce: true,
   });
 
   return (
-    <StyledContainer>
-      <StyledHeadingBox>
+    <StyledContainer ref={containerRef}>
+      <StyledHeadingBox ref={intRef}>
         <StyledHeading $inView={headingInView} $aboutMe={true}>
           About Me
         </StyledHeading>

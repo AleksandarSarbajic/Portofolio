@@ -1,7 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import styled, { css } from "styled-components";
 import DarkModeToggle from "./DarkModeToggle";
 import { useCallback, useEffect, useState } from "react";
+import { useIsInView } from "../context/IsInViewContext";
 
 const StyledNav = styled.nav`
   padding: 3rem 5%;
@@ -95,6 +96,16 @@ const StyledLink = styled(NavLink)`
   padding-bottom: 0.5rem;
   border-bottom: 1px solid transparent;
   transition: all 0.3s;
+
+  ${(props) =>
+    props.$inView === props.$code
+      ? css`
+          transform: translateY(-5%);
+          color: var(--color-brand-500);
+          border-bottom: 1px solid var(--color-brand-500);
+        `
+      : ""}
+
   &:hover,
   &:active {
     transform: translateY(-5%);
@@ -146,6 +157,10 @@ const StyledMenu = styled.button`
 `;
 
 function MainNav() {
+  const { section, setSectionHandler } = useIsInView();
+
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [scrollY, setScrollY] = useState(0);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -153,8 +168,11 @@ function MainNav() {
   const onScroll = useCallback(() => {
     const { pageYOffset } = window;
 
+    if (pageYOffset <= 200) {
+      setSectionHandler("#home");
+    }
     setScrollY(pageYOffset);
-  }, []);
+  }, [setSectionHandler]);
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -172,30 +190,61 @@ function MainNav() {
 
         <StyledList $active={isOpen}>
           <li>
-            <StyledLink onClick={() => setIsOpen((open) => !open)} to={"/"}>
+            <StyledLink
+              $inView={section}
+              $code={"#home"}
+              onClick={() => {
+                setIsOpen((open) => !open);
+                if (pathname === "/") {
+                  document.documentElement.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth",
+                  });
+                } else {
+                  navigate("/");
+                }
+              }}
+            >
               Home
             </StyledLink>
           </li>
           <li>
             <StyledLink
+              $inView={section}
+              $code={"#aboutme"}
               onClick={() => setIsOpen((open) => !open)}
-              to={"#aboutme"}
+              to={"/#aboutme"}
             >
               About me
             </StyledLink>
           </li>
           <li>
             <StyledLink
+              $inView={section}
+              $code={"#skills"}
               onClick={() => setIsOpen((open) => !open)}
-              to={"#projects"}
+              to={"/#skills"}
+            >
+              Skills
+            </StyledLink>
+          </li>
+          <li>
+            <StyledLink
+              $inView={section}
+              $code={"#projects"}
+              onClick={() => setIsOpen((open) => !open)}
+              to={"/#projects"}
             >
               Projects
             </StyledLink>
           </li>
           <li>
             <StyledLink
+              $inView={section}
+              $code={"#contact"}
               onClick={() => setIsOpen((open) => !open)}
-              to={"#contact"}
+              to={"/#contact"}
             >
               Contact me
             </StyledLink>

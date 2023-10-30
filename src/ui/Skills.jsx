@@ -17,8 +17,12 @@ import {
 import { useInView } from "react-intersection-observer";
 import StyledHeading from "./Heading";
 import StyledHeadingBox from "./HeadingBox";
+import useScrollTo from "../hooks/UseScrollTo";
+
+import { useIsInView } from "../context/IsInViewContext";
+import { useEffect } from "react";
 const StyledSkills = styled.section`
-  margin: 12.6rem 0;
+  margin-bottom: 20rem;
   padding: 0 1rem;
   @media only screen and (max-width: 50em) {
     padding: 0;
@@ -83,6 +87,13 @@ const StyledBox = styled.ul`
 `;
 
 function Skills() {
+  const { setSectionHandler } = useIsInView();
+
+  const { ref: containerRef } = useScrollTo({
+    hash: "#skills",
+    scrollTo: "center",
+  });
+
   const { ref: headingRef, inView: headingInView } = useInView({
     threshold: 1,
     triggerOnce: true,
@@ -93,13 +104,23 @@ function Skills() {
     triggerOnce: true,
   });
 
+  const { ref: intRef, inView: intInView } = useInView();
+  useEffect(() => {
+    if (intInView) {
+      setSectionHandler("#skills");
+    }
+  }, [intInView, setSectionHandler]);
+
   return (
-    <StyledSkills>
+    <StyledSkills ref={containerRef}>
       <StyledHeadingBox>
         <StyledHeading $inView={headingInView} $aboutMe={true}>
           My Skills
         </StyledHeading>
       </StyledHeadingBox>
+      <div ref={intRef} style={{ visibility: "hidden" }}>
+        dsd
+      </div>
       <StyledText ref={headingRef}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
         amet animi beatae iure dolore ipsa architecto expedita vel, est magnam

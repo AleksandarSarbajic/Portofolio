@@ -24,11 +24,11 @@ import StyledLink from "../ui/StyledLink";
 import ProjectBox from "../ui/ProjectsBox";
 import Contact from "../ui/Contact";
 import StyledHeadingBox from "../ui/HeadingBox";
-import useScrollTo from "../hooks/UseScrollTo";
+import useScrollToTop from "../hooks/UseScrollToTop";
 import StyledBoxImage from "../ui/StyledBoxImage";
 
 function WildOasis() {
-  // useScrollTo();
+  useScrollToTop();
 
   return (
     <>
@@ -37,11 +37,11 @@ function WildOasis() {
           <StyledProjectHeading>The Wild Oasis</StyledProjectHeading>
         </StyledHeadingBox>
         <StyledSubHeading>
-          The Wild Oasis is a React Project application build for hotel service.
-          I built this project in React Course with React, Supabase and more.
-          This application includes a lot of connections with Supabase so
-          everyone can have the same overall experience as well to stay updated
-          about customers.
+          The Wild Oasis is a React application build for hotel service. I built
+          this project in React Course with React, Supabase and more. This
+          application includes a lot of connections with Supabase so everyone
+          can have the same overall experience as well to stay updated about
+          customers.
         </StyledSubHeading>
       </ProjectHeader>
       <ProjectListContainer>
@@ -152,10 +152,24 @@ function WildOasis() {
         </div>
       </StyledProjectBox>
       <StyledImageBox>
-        <StyledBoxImage src="bookings.webp" alt="" />
-        <StyledBoxImage src="cabins.webp" alt="" delay={true} />
-        <StyledBoxImage src="createuser.webp" alt="" />
-        <StyledBoxImage src="settings.webp" alt="" delay={true} />
+        <StyledBoxImage
+          src="bookings.webp"
+          alt="Image of bookings on page the WildOasis"
+        />
+        <StyledBoxImage
+          src="cabins.webp"
+          alt="Image of cabins on page the WildOasis"
+          delay={true}
+        />
+        <StyledBoxImage
+          src="createuser.webp"
+          alt="Image by creating the user on the WildOasis"
+        />
+        <StyledBoxImage
+          src="settings.webp"
+          alt="Image of settings where you can adjust them on the WildOasis"
+          delay={true}
+        />
       </StyledImageBox>
       <StyledProjectBox>
         <div></div>
@@ -183,7 +197,7 @@ function WildOasis() {
 
       <StyledProjectImage
         src="checkin.webp"
-        alt="Screenshot of the WildOasis page"
+        alt="Image when you are checking in or checking out a booking"
       />
 
       <StyledProjectHeading $small $margin>
@@ -204,18 +218,24 @@ function WildOasis() {
       </StyledProjectHeading>
       <ProjectBox $margin>
         <Project>
-          <img src="TastyTrail.webp" />
+          <img
+            src="TastyTrail.webp"
+            alt="Image of landing page on the Tasty Trail"
+          />
           <h4>Tasty Trail</h4>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            cupiditate consectetur sint nostrum numquam veniam!
+            An e-commerce application built with React & Redux for a delivery
+            company.
           </p>
           <StyledLink to={"/es2"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="WorldLanding.webp" />
+          <img
+            src="WorldLanding.webp"
+            alt="Image of landing page on the World Wise"
+          />
           <h4>WorldWise</h4>
           <p>
             WorldWise is a React application that allows users to explore cities

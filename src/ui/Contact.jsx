@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import StyledForm from "./Form";
 import StyledButton from "./Button";
+import useScrollTo from "../hooks/UseScrollTo";
+import { useInView } from "react-intersection-observer";
+
+import { useEffect } from "react";
+import { useIsInView } from "../context/IsInViewContext";
 
 const StyledContainer = styled.section`
-  margin: 12.6rem 0 15.6rem 0;
+  margin: 15.6rem 0 15.6rem 0;
 `;
 
 const StyledHeading = styled.h4`
@@ -75,9 +80,26 @@ const StyledTextArea = styled.textarea`
 `;
 
 function Contact() {
+  const { ref: intRef, inView: intInView } = useInView({
+    threshold: 1,
+  });
+
+  const { setSectionHandler } = useIsInView();
+
+  useEffect(() => {
+    if (intInView) {
+      setSectionHandler("#contact");
+    }
+  }, [intInView, setSectionHandler]);
+
+  const { ref: containerRef } = useScrollTo({
+    hash: "#contact",
+    scrollTo: "center",
+  });
+
   return (
-    <StyledContainer>
-      <StyledHeading>Want to get in touch?</StyledHeading>
+    <StyledContainer ref={containerRef}>
+      <StyledHeading ref={intRef}>Want to get in touch?</StyledHeading>
       <StyledHeading>Send me a message! </StyledHeading>
       <StyledText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -24,11 +24,11 @@ import StyledLink from "../ui/StyledLink";
 import ProjectBox from "../ui/ProjectsBox";
 import Contact from "../ui/Contact";
 import StyledHeadingBox from "../ui/HeadingBox";
-import useScrollTo from "../hooks/UseScrollTo";
+import useScrollToTop from "../hooks/UseScrollToTop";
 import StyledBoxImage from "../ui/StyledBoxImage";
 
 function WorldWise() {
-  // useScrollTo();
+  useScrollToTop();
 
   return (
     <>
@@ -143,12 +143,33 @@ function WorldWise() {
         </div>
       </StyledProjectBox>
       <StyledImageBox>
-        <StyledBoxImage src="WorldMap.webp" alt="" />
-        <StyledBoxImage src="WorldCity.webp" alt="" delay={true} />
-        <StyledBoxImage src="WorldCountries.webp" alt="" />
-        <StyledBoxImage src="WorldLogIn.webp" alt="" delay={true} />
-        <StyledBoxImage src="WorldPricing.webp" alt="" />
-        <StyledBoxImage src="WorldAbout.webp" alt="" delay={true} />
+        <StyledBoxImage
+          src="WorldMap.webp"
+          alt="Image of application with map and markers on the right side with information about markers on the left side."
+        />
+        <StyledBoxImage
+          src="WorldCity.webp"
+          alt="Image by selecting the marker and opening personal description about it"
+          delay={true}
+        />
+        <StyledBoxImage
+          src="WorldCountries.webp"
+          alt="The Image of the countries that you visited"
+        />
+        <StyledBoxImage
+          src="WorldLogIn.webp"
+          alt="The image of the login page before accessing to the application"
+          delay={true}
+        />
+        <StyledBoxImage
+          src="WorldPricing.webp"
+          alt="The image of pricing page"
+        />
+        <StyledBoxImage
+          src="WorldAbout.webp"
+          alt="Image of the about page"
+          delay={true}
+        />
       </StyledImageBox>
       <StyledProjectBox>
         <div></div>
@@ -167,7 +188,7 @@ function WorldWise() {
 
       <StyledProjectImage
         src="WorldAdd.webp"
-        alt="Screenshot of the WildOasis page"
+        alt="Image when you are submitting a city information"
       />
 
       <StyledProjectHeading $small $margin>
@@ -184,7 +205,10 @@ function WorldWise() {
       </StyledProjectHeading>
       <ProjectBox $margin>
         <Project>
-          <img src="WildOasis.webp" />
+          <img
+            src="WildOasis.webp"
+            alt="Image of dashboard on the WildOasis page"
+          />
           <h4>The Wild Oasis</h4>
           <p>
             The Wild Oasis is a user friendly hotel management application. That
@@ -195,11 +219,14 @@ function WorldWise() {
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="TastyTrail.webp" />
+          <img
+            src="TastyTrail.webp"
+            alt="Image of landing page on the Tasty Trail"
+          />
           <h4>Tasty Trail</h4>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            cupiditate consectetur sint nostrum numquam veniam!
+            An e-commerce application built with React & Redux for a delivery
+            company.
           </p>
           <StyledLink to={"/es2"}>
             View Project <BsArrowRight />

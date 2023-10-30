@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-// import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
 import styled, { css } from "styled-components";
 
@@ -84,4 +83,5 @@ function useDarkMode() {
   return context;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { DarkModeProvider, useDarkMode };

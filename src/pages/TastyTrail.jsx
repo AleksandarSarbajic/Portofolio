@@ -24,11 +24,11 @@ import StyledLink from "../ui/StyledLink";
 import ProjectBox from "../ui/ProjectsBox";
 import Contact from "../ui/Contact";
 import StyledHeadingBox from "../ui/HeadingBox";
-import useScrollTo from "../hooks/UseScrollTo";
+import useScrollToTop from "../hooks/UseScrollToTop";
 import StyledBoxImage from "../ui/StyledBoxImage";
 
 function TastyTrail() {
-  useScrollTo();
+  useScrollToTop();
 
   return (
     <>
@@ -37,17 +37,17 @@ function TastyTrail() {
           <StyledProjectHeading>Tasty Trail</StyledProjectHeading>
         </StyledHeadingBox>
         <StyledSubHeading>
-          The Wild Oasis is a React Project application build for hotel service.
-          I built this project in React Course with React, Supabase and more.
-          This application includes a lot of connections with Supabase so
-          everyone can have the same overall experience as well to stay updated
-          about customers.
+          Tasty Trail is a React Application built for a delivery. I build this
+          project from scratch and did a design by my self with React, Redux and
+          more. A lot of work was needed to develop the common cart and overall
+          shopping experience, as well as to present the product and integrate
+          support pages, for this e-commerce application.
         </StyledSubHeading>
       </ProjectHeader>
       <ProjectListContainer>
         <StyledList>
           <ProjectListItem heading={true}>Type</ProjectListItem>
-          <ProjectListItem>Course</ProjectListItem>
+          <ProjectListItem>Practice</ProjectListItem>
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Stack</ProjectListItem>
@@ -58,7 +58,7 @@ function TastyTrail() {
             <SiRedux /> Redux Toolkit
           </ProjectListItem>
           <ProjectListItem>
-            <SiReactrouter /> Reactrouter
+            <SiReactrouter /> React router dom
           </ProjectListItem>
           <ProjectListItem>
             <SiSass /> Sass
@@ -91,11 +91,16 @@ function TastyTrail() {
         Project Purpose and Goal
       </StyledProjectHeading>
       <StyledSubHeading>
-        The Wild Oasis is a React Project application build for hotel service. I
-        built this project in React Course with React, Supabase and more. This
-        application includes a lot of connections with Supabase so everyone can
-        have the same overall experience as well to stay updated about
-        customers.
+        This project included the following 3 phases and iterations of the site.
+        Phase 1 is simply let users discover a store they want.Phase 2 is quite
+        larger and is designed to let users search for the product they want.
+        Phase 3 is by far the largest and most complex, as it includes the full
+        shop and cart pages as well as the logic that goes along with it.
+      </StyledSubHeading>
+      <StyledSubHeading $space>
+        I found that the best way to implement these 3 phases without having
+        separate versions, was to first create a cart and page functionalities
+        and that their data will be displayed and rendered conditionally.
       </StyledSubHeading>
       <StyledProjectBox>
         <StyledStack>
@@ -106,7 +111,7 @@ function TastyTrail() {
             <SiRedux /> Redux Toolkit
           </StyledStackItem>
           <StyledStackItem $red>
-            <SiReactrouter /> Reactrouter
+            <SiReactrouter /> React router dom
           </StyledStackItem>
           <StyledStackItem $pink>
             <SiSass /> Sass
@@ -123,27 +128,49 @@ function TastyTrail() {
             Web Stack and Explanation
           </StyledProjectHeading>
           <StyledSubHeading $big>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more. This application includes a lot of connections with
-            Supabase so everyone can have the same overall experience as well to
-            stay updated about customers.
+            React made the most sense for the web application because i wanted
+            to practice React and create some Large project with it. Firebase
+            was chosen just so i can store data about stores and products that
+            user cant interact with.
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more.
+            Throughout the project, Redux and React hooks are also utilized to
+            manage the user cart items and enable the universal display of the
+            cart count and other shopping data. Netlify is also an obvious
+            choice for deployment because of its speed and reliability.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
       <StyledImageBox>
-        <StyledBoxImage src="TastyDiscovery.webp" alt="" />
-        <StyledBoxImage src="restaurantPage.webp" alt="" delay={true} />
-        <StyledBoxImage src="restaurant.webp" alt="" />
-        <StyledBoxImage src="TastyCart.webp" alt="" delay={true} />
-        <StyledBoxImage src="TastySearch.webp" alt="" />
-        <StyledBoxImage src="TastySearchPage.webp" alt="" delay={true} />
+        <StyledBoxImage
+          src="TastyDiscovery.webp"
+          alt="Image of discovery page where user can browse restaurants and markets"
+        />
+        <StyledBoxImage
+          src="restaurantPage.webp"
+          alt="Image where only restaurants and their categories are shown"
+          delay={true}
+        />
+        <StyledBoxImage
+          src="restaurant.webp"
+          alt="Image when user is browsing food in restaurant"
+        />
+        <StyledBoxImage
+          src="TastyCart.webp"
+          alt="Image of cart with items selected"
+          delay={true}
+        />
+        <StyledBoxImage
+          src="TastySearch.webp"
+          alt="Image where user is searching for desired store
+        "
+        />
+        <StyledBoxImage
+          src="TastySearchPage.webp"
+          alt="Image when user goes to display all results for search"
+          delay={true}
+        />
       </StyledImageBox>
       <StyledProjectBox>
         <div></div>
@@ -152,42 +179,44 @@ function TastyTrail() {
             Problems and Thought Process
           </StyledProjectHeading>
           <StyledSubHeading $big>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more. This application includes a lot of connections with
-            Supabase so everyone can have the same overall experience as well to
-            stay updated about customers.
+            I had several difficulties when working on this project, like with
+            most others. One especially challenging component was doing a shop
+            search, where you could look for specific things.
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
-            The Wild Oasis is a React Project application build for hotel
-            service. I built this project in React Course with React, Supabase
-            and more.
+            In addition, I tried to make components as reusable as possible and
+            used props for as many components as I could in order to make the
+            application run as quickly as possible.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
 
       <StyledProjectImage
         src="TastyAddToCart.webp"
-        alt="Screenshot of the WildOasis page"
+        alt="Image when user wants to add item to cart"
       />
 
       <StyledProjectHeading $small $margin>
         Lessons Learned
       </StyledProjectHeading>
       <StyledSubHeading>
-        The Wild Oasis is a React Project application build for hotel service. I
-        built this project in React Course with React, Supabase and more. This
-        application includes a lot of connections with Supabase so everyone can
-        have the same overall experience as well to stay updated about
-        customers.
+        I could write a book on the lessons I learned working on this project,
+        but the ones that really stood out to me had to do with how much I now
+        understood Redux and React Hooks. As this was my first significant Redux
+        project, I gained a lot of knowledge about the state and hooks of Redux.
+        With a great deal of code reworking and bug fixes, for improved
+        readability and fewer bugs that arise late at night.
       </StyledSubHeading>
       <StyledProjectHeading $medium $margin>
         Other Projects
       </StyledProjectHeading>
       <ProjectBox $margin>
         <Project>
-          <img src="WildOasis.webp" />
+          <img
+            src="WildOasis.webp"
+            alt="Image of dashboard on the WildOasis page"
+          />
           <h4>The Wild Oasis</h4>
           <p>
             The Wild Oasis is a user friendly hotel management application. That
@@ -198,7 +227,10 @@ function TastyTrail() {
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="WorldLanding.webp" />
+          <img
+            src="WorldLanding.webp"
+            alt="Image of landing page on the World Wise"
+          />
           <h4>WorldWise</h4>
           <p>
             WorldWise is a React application that allows users to explore cities

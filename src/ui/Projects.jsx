@@ -7,6 +7,10 @@ import { BsArrowRight } from "react-icons/bs";
 import StyledHeadingBox from "./HeadingBox";
 import StyledLink from "./StyledLink";
 import ProjectBox from "./ProjectsBox";
+import useScrollTo from "../hooks/UseScrollTo";
+
+import { useEffect } from "react";
+import { useIsInView } from "../context/IsInViewContext";
 
 const StyledContainer = styled.section`
   padding: 1rem;
@@ -37,12 +41,27 @@ const StyledDescription = styled.p`
 `;
 
 function Projects() {
+  const { ref: intRef, inView: intInView } = useInView({ threshold: 1 });
+
+  const { setSectionHandler } = useIsInView();
+
+  useEffect(() => {
+    if (intInView) {
+      setSectionHandler("#projects");
+    }
+  }, [intInView, setSectionHandler]);
+
+  const { ref: containerRef } = useScrollTo({
+    hash: "#projects",
+    scrollTo: "start",
+  });
+
   const { inView: inViewHeading, ref: headingRef } = useInView({
     threshold: 1,
     triggerOnce: true,
   });
   return (
-    <StyledContainer>
+    <StyledContainer ref={containerRef}>
       <StyledHeadingBox>
         <StyledHeading $inView={inViewHeading}>
           What I&apos;ve been working on
@@ -57,7 +76,11 @@ function Projects() {
 
       <ProjectBox>
         <Project>
-          <img src="WildOasis.webp" />
+          <img
+            src="WildOasis.webp"
+            ref={intRef}
+            alt="Image of dashboard on the WildOasis page"
+          />
           <h4>The Wild Oasis</h4>
           <p>
             The Wild Oasis is a user friendly hotel management application. That
@@ -68,18 +91,24 @@ function Projects() {
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="TastyTrail.webp" />
+          <img
+            src="TastyTrail.webp"
+            alt="Image of landing page on the Tasty Trail"
+          />
           <h4>Tasty Trail</h4>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            cupiditate consectetur sint nostrum numquam veniam!
+            An e-commerce application built with React & Redux for a delivery
+            company.
           </p>
           <StyledLink to={"/es2"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
         <Project>
-          <img src="WorldLanding.webp" />
+          <img
+            src="WorldLanding.webp"
+            alt="Image of landing page on the World Wise"
+          />
           <h4>WorldWise</h4>
           <p>
             WorldWise is a React application that allows users to explore cities
@@ -90,11 +119,11 @@ function Projects() {
           </StyledLink>
         </Project>
         <Project time={true}>
-          <img src="FlixMovies.webp" />
+          <img src="FlixMovies.webp" alt="Image of movies on the CreckFlix" />
           <h4>CreckFlix</h4>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            cupiditate consectetur sint nostrum numquam veniam!
+            CreckFlix is an online movie streaming application that is
+            user-friendly and allows users to watch movies for free.
           </p>
           <StyledLink to={"/es4"}>
             View Project <BsArrowRight />

@@ -1,4 +1,7 @@
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import styled, { keyframes } from "styled-components";
+import { useIsInView } from "../context/IsInViewContext";
 
 const headingAnimation = keyframes`
 0%{transform: translateX(-50%); opacity:0;}
@@ -12,7 +15,7 @@ const imageAnimation = keyframes`
 `;
 
 const StyledHero = styled.div`
-  padding: 10rem 1rem;
+  padding: 10rem 1rem 25rem 1rem;
   display: grid;
   grid-template-columns: 55% 40%;
   align-items: center;
@@ -20,7 +23,7 @@ const StyledHero = styled.div`
   gap: 3rem;
 
   @media only screen and (max-width: 62.5em) {
-    padding: 10rem 0;
+    padding: 10rem 0 20rem 0;
   }
   @media only screen and (max-width: 50em) {
     grid-template-columns: 1fr;
@@ -83,13 +86,23 @@ const StyledImage = styled.img`
 `;
 
 function Hero() {
+  const { ref: intRef, inView: intInView } = useInView();
+
+  const { setSectionHandler } = useIsInView();
+
+  useEffect(() => {
+    if (intInView) {
+      setSectionHandler("#home");
+    }
+  }, [intInView, setSectionHandler]);
+
   return (
     <StyledHero>
-      <StyledHeading>
+      <StyledHeading ref={intRef}>
         Hi there, I&apos;m Aleksandar. Front End{" "}
         <StyledSpan>Developer</StyledSpan>, crafting beautiful web applications.
       </StyledHeading>
-      <StyledImage src="hero_image.webp"></StyledImage>
+      <StyledImage src="hero_image.webp" alt="Image of Me" />
     </StyledHero>
   );
 }
