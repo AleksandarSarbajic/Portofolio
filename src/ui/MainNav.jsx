@@ -201,6 +201,7 @@ function MainNav() {
                     left: 0,
                     behavior: "smooth",
                   });
+                  navigate("/");
                 } else {
                   navigate("/");
                 }

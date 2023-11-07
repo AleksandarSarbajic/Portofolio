@@ -122,10 +122,9 @@ function Skills() {
         dsd
       </div>
       <StyledText ref={headingRef}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-        amet animi beatae iure dolore ipsa architecto expedita vel, est magnam
-        doloremque iusto voluptate illum, optio hic, officia non voluptates
-        delectus?
+        Through my experience, I have acquired a thorough understanding of web
+        development concepts and have dedicated a substantial amount of time to
+        implementing them in real-world scenarios and applications.
       </StyledText>
       <StyledBox ref={boxRef} $inView={boxInView}>
         <StyledSkill>

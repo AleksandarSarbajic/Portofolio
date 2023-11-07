@@ -46,7 +46,7 @@ function WorldWise() {
       <ProjectListContainer>
         <StyledList>
           <ProjectListItem heading={true}>Type</ProjectListItem>
-          <ProjectListItem>Course</ProjectListItem>
+          <ProjectListItem>Practice</ProjectListItem>
           <ProjectListItem>Desktop only</ProjectListItem>
         </StyledList>
         <StyledList>

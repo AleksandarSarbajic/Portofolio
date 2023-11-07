@@ -68,10 +68,9 @@ function Projects() {
         </StyledHeading>
       </StyledHeadingBox>
       <StyledDescription ref={headingRef}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos iure
-        consequatur, voluptatem ratione inventore similique sunt laborum
-        nesciunt, aspernatur magni autem. Exercitationem, dolore odit. Ullam
-        dolorem officiis odit nemo quam.
+        Having a project at work is something I enjoy, along with learning
+        something new. Take a look at some of the applications that I have been
+        working on.
       </StyledDescription>
 
       <ProjectBox>

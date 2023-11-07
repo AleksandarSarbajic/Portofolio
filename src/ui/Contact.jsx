@@ -23,8 +23,10 @@ const StyledHeading = styled.h4`
 const StyledText = styled.p`
   font-size: 1.8rem;
   margin-bottom: 3rem;
+  width: 60%;
   @media only screen and (max-width: 50em) {
     text-align: center;
+    width: 100%;
   }
 `;
 
@@ -102,7 +104,8 @@ function Contact() {
       <StyledHeading ref={intRef}>Want to get in touch?</StyledHeading>
       <StyledHeading>Send me a message! </StyledHeading>
       <StyledText>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        If you&apos;re searching for a developer, need help with something, or
+        just want to connect, don&apos;t hesitate to get in touch.
       </StyledText>
       <StyledForm name="contact" method="post" action="/redirect">
         <StyledInput type="hidden" name="form-name" value="contact" />

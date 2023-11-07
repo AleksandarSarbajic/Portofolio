@@ -38,7 +38,7 @@ function WildOasis() {
         </StyledHeadingBox>
         <StyledSubHeading>
           The Wild Oasis is a React application build for hotel service. I built
-          this project in React Course with React, Supabase and more. This
+          this project while practicing React, Supabase and more. This
           application includes a lot of connections with Supabase so everyone
           can have the same overall experience as well to stay updated about
           customers.
@@ -47,7 +47,8 @@ function WildOasis() {
       <ProjectListContainer>
         <StyledList>
           <ProjectListItem heading={true}>Type</ProjectListItem>
-          <ProjectListItem>Course</ProjectListItem>
+          <ProjectListItem>Practice</ProjectListItem>
+          <ProjectListItem>Desktop only</ProjectListItem>
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Stack</ProjectListItem>
@@ -103,7 +104,7 @@ function WildOasis() {
         enabling login, logout and beautiful dark mode.
       </StyledSubHeading>
       <StyledSubHeading $space>
-        The most effective approach we found to implement these 5 phases is to
+        The most effective approach I found to implement these 5 phases is to
         create a distinct page first, and then add the global states and login
         functions. This way dashboard information was rendered conditionally
         with bookings being updated.
