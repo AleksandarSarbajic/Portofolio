@@ -11,6 +11,7 @@ import TastyTrail from "./pages/TastyTrail";
 import CreckFlix from "./pages/Creckflix";
 import WorldWise from "./pages/WorldWise";
 import { IsInViewProvider } from "./context/IsInViewContext";
+import UseEasterEgg from "./hooks/UseEasterEgg";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,7 @@ function App() {
   return (
     <>
       <DarkModeProvider>
+        <UseEasterEgg />
         <IsInViewProvider>
           <GlobalStyles />
           <RouterProvider router={router} />

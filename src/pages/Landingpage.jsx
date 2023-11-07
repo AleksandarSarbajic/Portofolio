@@ -1,4 +1,3 @@
-import UseEasterEgg from "../hooks/UseEasterEgg";
 import useScrollToTop from "../hooks/UseScrollToTop";
 import AboutMe from "../ui/AboutMe";
 import Contact from "../ui/Contact";
@@ -7,7 +6,6 @@ import Projects from "../ui/Projects";
 import Skills from "../ui/Skills";
 
 function Landingpage() {
-  UseEasterEgg();
   useScrollToTop();
   return (
     <>
