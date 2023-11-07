@@ -84,8 +84,8 @@ function AboutMe() {
         <StyledText>
           My first experience with programming was when I was 16, but I
           didn&apos;t last long: I was a big fan of gaming and I enjoyed more
-          playing games. Once in a class we started doing basic c and after c++,
-          and it was totally inscrutable to me.
+          playing games. Once in a class we started doing basic c and right
+          after c++, and it was totally inscrutable to me.
         </StyledText>
         <StyledText>
           Since then, I&apos;ve been honing my skills and studying JavaScript
