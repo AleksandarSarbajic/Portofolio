@@ -178,7 +178,7 @@ function CreckFlix() {
       </StyledProjectBox>
 
       <StyledProjectImage
-        src="TastyAddToCart.webp"
+        src="FlixSearch.webp"
         alt="Screenshot of the WildOasis page"
       />
 
