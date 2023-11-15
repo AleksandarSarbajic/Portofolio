@@ -48,7 +48,9 @@ function AboutMe() {
   const { setSectionHandler } = useIsInView();
 
   useEffect(() => {
-    if (intInView) {
+    const { pageYOffset } = window;
+    console.log(pageYOffset);
+    if (intInView && pageYOffset > 50) {
       setSectionHandler("#aboutme");
     }
   }, [intInView, setSectionHandler]);
