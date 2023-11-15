@@ -73,7 +73,9 @@ function WildOasis() {
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Links</ProjectListItem>
-          <ProjectListItem link={"https://aleksandarsarbajic.com/"}>
+          <ProjectListItem
+            link={"https://the-wild-oasis-aleksandar.netlify.app/dashboard"}
+          >
             Live
           </ProjectListItem>
           <ProjectListItem
