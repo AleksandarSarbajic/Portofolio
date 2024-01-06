@@ -21,6 +21,14 @@ const StyledImageBox = styled.div`
     grid-template-columns: 1fr;
     gap: 10rem;
   }
+  ${(props) =>
+    props.$nothing &&
+    css`
+      @media only screen and (max-width: 50em) {
+        grid-template-columns: 1fr;
+        gap: 10rem;
+      }
+    `}
 `;
 
 export default StyledImageBox;

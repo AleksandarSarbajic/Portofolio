@@ -157,7 +157,7 @@ function NothingTodo() {
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
-      <StyledImageBox>
+      <StyledImageBox $nothing={true}>
         <StyledBoxImage
           src="categoriesTodo.png"
           alt="Image of bookings on page the WildOasis"

@@ -21,6 +21,10 @@ const StyledImg = styled.img`
       opacity: 1;
       visibility: visible;
     `}
+
+    @media only screen and (max-width: 50em) {
+    grid-column: 1 / 2 !important;
+  }
 `;
 
 function StyledBoxImage({ src, alt, delay, style }) {

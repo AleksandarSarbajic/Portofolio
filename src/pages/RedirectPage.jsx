@@ -3,7 +3,7 @@ import Redirect from "../ui/Redirect";
 function RedirectPage() {
   return (
     <div>
-      <Redirect></Redirect>
+      <Redirect />
     </div>
   );
 }
