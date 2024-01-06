@@ -95,7 +95,7 @@ function NothingTodo() {
         Project Purpose and Goal
       </StyledProjectHeading>
       <StyledSubHeading>
-        This project included the following 5 phases and iterations of the site.
+        This project included the following 4 phases and iterations of the site.
         The first phase was enabling users to create their own account using the
         form or few different providers. The second phase was creating main page
         for users where they can create their task list and have a different
@@ -105,10 +105,9 @@ function NothingTodo() {
         beautiful analytics so users can track their own progress.
       </StyledSubHeading>
       <StyledSubHeading $space>
-        The most effective approach I found to implement these 5 phases is to
-        create a distinct page first, and then add the global states and login
-        functions. This way dashboard information was rendered conditionally
-        with bookings being updated.
+        The most effective approach I found to implement these 4 phases is to
+        create login page, and after that create reusable pages and components
+        that are connected to settings of user account.
       </StyledSubHeading>
       <StyledProjectBox>
         <StyledStack>
