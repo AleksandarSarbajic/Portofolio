@@ -5,6 +5,7 @@ import {
   SiReactquery,
   SiStyledcomponents,
   SiSupabase,
+  SiTypescript,
 } from "react-icons/si";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -27,33 +28,35 @@ import StyledHeadingBox from "../ui/HeadingBox";
 import useScrollToTop from "../hooks/UseScrollToTop";
 import StyledBoxImage from "../ui/StyledBoxImage";
 
-function WildOasis() {
+function NothingTodo() {
   useScrollToTop();
 
   return (
     <>
       <ProjectHeader>
         <StyledHeadingBox $project>
-          <StyledProjectHeading>The Wild Oasis</StyledProjectHeading>
+          <StyledProjectHeading>Nothing To-do</StyledProjectHeading>
         </StyledHeadingBox>
         <StyledSubHeading>
-          The Wild Oasis is a React application build for hotel service. I built
-          this project while practicing React, Supabase and more. This
-          application includes a lot of connections with Supabase so everyone
-          can have the same overall experience as well to stay updated about
-          customers.
+          The Nothing To-Do is a React-TypeScript application build for task
+          management. This was my first big project using TypeScript with React.
+          This application includes a lot of connections with Supabase so
+          everyone can have the same overall experience to stay updated with
+          their tasks.
         </StyledSubHeading>
       </ProjectHeader>
       <ProjectListContainer>
         <StyledList>
           <ProjectListItem heading={true}>Type</ProjectListItem>
           <ProjectListItem>Practice</ProjectListItem>
-          <ProjectListItem>Desktop only</ProjectListItem>
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Stack</ProjectListItem>
           <ProjectListItem>
             <SiReact /> React
+          </ProjectListItem>
+          <ProjectListItem>
+            <SiTypescript /> TypeScript
           </ProjectListItem>
           <ProjectListItem>
             <SiReactquery /> React Query
@@ -73,20 +76,18 @@ function WildOasis() {
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Links</ProjectListItem>
-          <ProjectListItem
-            link={"https://the-wild-oasis-aleksandar.netlify.app/dashboard"}
-          >
+          <ProjectListItem link={"https://nothing-todos.netlify.app/login"}>
             Live
           </ProjectListItem>
           <ProjectListItem
-            link={"https://github.com/AleksandarSarbajic/the-wild-oasis"}
+            link={"https://github.com/AleksandarSarbajic/NothingTodo"}
           >
             GitHub
           </ProjectListItem>
         </StyledList>
       </ProjectListContainer>
       <StyledProjectImage
-        src="WildOasis.webp"
+        src="dashboardTodo.png"
         alt="Screenshot of the WildOasis page"
       />
 
@@ -95,15 +96,13 @@ function WildOasis() {
       </StyledProjectHeading>
       <StyledSubHeading>
         This project included the following 5 phases and iterations of the site.
-        Phase 1 is simply the cabins page where employee can see all the info
-        about a specific cabin, sort the cabins, edit and add a new cabin. Phase
-        2 is by far the largest and the most complex, as it includes all booking
-        information and all functions so the employee can edit them. Phase 3 is
-        all about overall UX, where employees can set their settings, create
-        other user account and update their own account. Phase 4 is the second
-        largest phase, where we created the beautiful dashboard about all
-        information that&apos;s happening. And the last phase 5 is about
-        enabling login, logout and beautiful dark mode.
+        The first phase was enabling users to create their own account using the
+        form or few different providers. The second phase was creating main page
+        for users where they can create their task list and have a different
+        variability of their categories. The third phase was applying settings
+        information to whole application and their tasks so user can change what
+        they want to see on the screen. And the fourth phase was creating
+        beautiful analytics so users can track their own progress.
       </StyledSubHeading>
       <StyledSubHeading $space>
         The most effective approach I found to implement these 5 phases is to
@@ -115,6 +114,9 @@ function WildOasis() {
         <StyledStack>
           <StyledStackItem $blue>
             <SiReact /> React
+          </StyledStackItem>
+          <StyledStackItem $blue>
+            <SiTypescript /> TypeScript
           </StyledStackItem>
           <StyledStackItem $red>
             <SiReactquery /> React Query
@@ -137,11 +139,10 @@ function WildOasis() {
             Web Stack and Explanation
           </StyledProjectHeading>
           <StyledSubHeading $big>
-            React made the most sense for this web application because it&apos;s
-            very simple to use Supabase in combination with ReactQuery which
-            provide very smooth experience. Supabase was chosen because of the
-            ability how easy it to connect to it and to add data that we need by
-            creating tables.
+            I chose React for this application because I wanted to practice
+            using React with TypeScript. For data base I chose Supabase with
+            incredible support for TypeScript and very good combination with
+            ReactQuery.
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
@@ -149,29 +150,33 @@ function WildOasis() {
             performance, because we can store stale data in it and as we go to
             the same page that is using that data loading will be significantly
             faster. Reach Hook Form came first in mind for using the forms,
-            because how fast and easy you can work with it. Netlify is also an
-            obvious choice for deployment because of its speed and reliability.
+            because how fast and easy you can work with it. In this project I
+            went for mobile first option for responsive using styled components.
+            Netlify is also an obvious choice for deployment because of its
+            speed and reliability.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
       <StyledImageBox>
         <StyledBoxImage
-          src="bookings.webp"
+          src="categoriesTodo.png"
           alt="Image of bookings on page the WildOasis"
         />
+
         <StyledBoxImage
-          src="cabins.webp"
-          alt="Image of cabins on page the WildOasis"
+          style={{ gridRow: "1 / 4", gridColumn: " 2 / 3" }}
+          src="settingsTodo.png"
+          alt="Image of settings where you can adjust them on the WildOasis"
           delay={true}
         />
         <StyledBoxImage
-          src="createuser.webp"
+          src="searchTodo.png"
           alt="Image by creating the user on the WildOasis"
         />
         <StyledBoxImage
-          src="settings.webp"
-          alt="Image of settings where you can adjust them on the WildOasis"
-          delay={true}
+          style={{ gridColumn: " 1 / 2" }}
+          src="analyticsTodo.png"
+          alt="Image by creating the user on the WildOasis"
         />
       </StyledImageBox>
       <StyledProjectBox>
@@ -182,10 +187,8 @@ function WildOasis() {
           </StyledProjectHeading>
           <StyledSubHeading $big>
             Like most projects, there is always some problem on your journey,
-            the most difficult area was the organization of the data and loading
-            the same data as fast as possible so our app doesn&apos;t get slow.
-            I realized how important maintaining the speed of data flow is
-            important.
+            the most difficult was using TypeScript with custom components and
+            props compensated with data from Supabase.
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
@@ -199,7 +202,7 @@ function WildOasis() {
       </StyledProjectBox>
 
       <StyledProjectImage
-        src="checkin.webp"
+        src="loginTodo.png"
         alt="Image when you are checking in or checking out a booking"
       />
 
@@ -209,18 +212,29 @@ function WildOasis() {
       <StyledSubHeading>
         I could spend all day describing the lessons that I learned while
         working on this project, but the most important ones involved in my
-        newfound understanding of React Hooks, Supabase, ReactQuery and Styled
-        components. As my first large project using React, I learned a lot of
-        data structure and code organization. When I first began, I was confused
-        about ReactQuery and Supabase tables, but as soon as I understood how it
-        works, everything went really well. With a lot of refactoring code and
-        resolving issues, for better readability and fewer late night problems.
+        newfound understanding of TypeScipt and React. As my first large project
+        using TypeScipt, I learned a lot about the types, interfaces and how to
+        make components more reusable with generic types.
       </StyledSubHeading>
       <StyledProjectHeading $medium $margin>
         Other Projects
       </StyledProjectHeading>
       <ProjectBox $margin>
         <Project>
+          <img
+            src="WildOasis.webp"
+            alt="Image of dashboard on the WildOasis page"
+          />
+          <h4>The Wild Oasis</h4>
+          <p>
+            The Wild Oasis is a user friendly hotel management application. That
+            helps employees menage everything about hotel data.
+          </p>
+          <StyledLink to={"/es1"}>
+            View Project <BsArrowRight />
+          </StyledLink>
+        </Project>
+        <Project time={true}>
           <img
             src="TastyTrail.webp"
             alt="Image of landing page on the Tasty Trail"
@@ -234,24 +248,10 @@ function WildOasis() {
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
-        <Project>
-          <img
-            src="dashboardTodo.png"
-            alt="Image of landing page on the World Wise"
-          />
-          <h4>Nothing To-Do</h4>
-          <p>
-            Nothing To-Do is todo-list application inspired by Nothing Company
-            design.
-          </p>
-          <StyledLink to={"/es3"}>
-            View Project <BsArrowRight />
-          </StyledLink>
-        </Project>
       </ProjectBox>
       <Contact />
     </>
   );
 }
 
-export default WildOasis;
+export default NothingTodo;

@@ -226,15 +226,15 @@ function TastyTrail() {
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
-        <Project time={true}>
+        <Project>
           <img
-            src="WorldLanding.webp"
+            src="dashboardTodo.png"
             alt="Image of landing page on the World Wise"
           />
-          <h4>WorldWise</h4>
+          <h4>Nothing To-Do</h4>
           <p>
-            WorldWise is a React application that allows users to explore cities
-            from around the world.
+            Nothing To-Do is todo-list application inspired by Nothing Company
+            design.
           </p>
           <StyledLink to={"/es3"}>
             View Project <BsArrowRight />

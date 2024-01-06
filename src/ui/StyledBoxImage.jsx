@@ -23,14 +23,21 @@ const StyledImg = styled.img`
     `}
 `;
 
-function StyledBoxImage({ src, alt, delay }) {
+function StyledBoxImage({ src, alt, delay, style }) {
   const { inView, ref } = useInView({
     threshold: 0.7,
     triggerOnce: true,
   });
 
   return (
-    <StyledImg $delay={delay} $inView={inView} ref={ref} src={src} alt={alt} />
+    <StyledImg
+      $delay={delay}
+      style={style}
+      $inView={inView}
+      ref={ref}
+      src={src}
+      alt={alt}
+    />
   );
 }
 

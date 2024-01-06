@@ -3,7 +3,6 @@ import StyledSkill from "./Skill";
 import {
   SiCss3,
   SiGit,
-  SiGithub,
   SiHtml5,
   SiJavascript,
   SiNextdotjs,
@@ -13,6 +12,7 @@ import {
   SiSass,
   SiStyledcomponents,
   SiSupabase,
+  SiTypescript,
 } from "react-icons/si";
 import { useInView } from "react-intersection-observer";
 import StyledHeading from "./Heading";
@@ -140,8 +140,16 @@ function Skills() {
           JavaScript ES6
         </StyledSkill>
         <StyledSkill>
+          <SiTypescript />
+          TypeScript
+        </StyledSkill>
+        <StyledSkill>
           <SiSass />
           SASS
+        </StyledSkill>
+        <StyledSkill>
+          <SiStyledcomponents />
+          StyledComponents
         </StyledSkill>
 
         <StyledSkill>
@@ -160,10 +168,7 @@ function Skills() {
           <SiNextdotjs />
           NextJS
         </StyledSkill>
-        <StyledSkill>
-          <SiStyledcomponents />
-          StyledComponents
-        </StyledSkill>
+
         <StyledSkill>
           <SiSupabase />
           Supabase
@@ -171,10 +176,6 @@ function Skills() {
         <StyledSkill>
           <SiGit />
           Git
-        </StyledSkill>
-        <StyledSkill>
-          <SiGithub />
-          GitHub
         </StyledSkill>
       </StyledBox>
     </StyledSkills>

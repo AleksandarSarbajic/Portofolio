@@ -24,6 +24,8 @@ const StyledBox = styled.div`
 
   img {
     width: 100%;
+    height: 28rem;
+    object-fit: cover;
   }
   h4 {
     margin: 1rem 0;

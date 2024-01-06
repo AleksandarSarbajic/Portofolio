@@ -9,9 +9,10 @@ import WildOasis from "./pages/WildOasis";
 import ErrorPage from "./ui/ErrorPage";
 import TastyTrail from "./pages/TastyTrail";
 import CreckFlix from "./pages/Creckflix";
-import WorldWise from "./pages/WorldWise";
+// import WorldWise from "./pages/WorldWise";
 import { IsInViewProvider } from "./context/IsInViewContext";
 import UseEasterEgg from "./hooks/UseEasterEgg";
+import NothingTodo from "./pages/NothingTodo";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/es3",
-        element: <WorldWise />,
+        element: <NothingTodo />,
       },
       {
         path: "/es4",

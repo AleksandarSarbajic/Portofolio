@@ -76,6 +76,20 @@ function Projects() {
       <ProjectBox>
         <Project>
           <img
+            src="dashboardTodo.png"
+            alt="Image of landing page on the World Wise"
+          />
+          <h4>Nothing To-Do</h4>
+          <p>
+            Nothing To-Do is todo-list application inspired by Nothing Company
+            design.
+          </p>
+          <StyledLink to={"/es3"}>
+            View Project <BsArrowRight />
+          </StyledLink>
+        </Project>
+        <Project>
+          <img
             src="WildOasis.webp"
             ref={intRef}
             alt="Image of dashboard on the WildOasis page"
@@ -103,20 +117,7 @@ function Projects() {
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
-        <Project>
-          <img
-            src="WorldLanding.webp"
-            alt="Image of landing page on the World Wise"
-          />
-          <h4>WorldWise</h4>
-          <p>
-            WorldWise is a React application that allows users to explore cities
-            from around the world.
-          </p>
-          <StyledLink to={"/es3"}>
-            View Project <BsArrowRight />
-          </StyledLink>
-        </Project>
+
         <Project time={true}>
           <img src="FlixMovies.webp" alt="Image of movies on the CreckFlix" />
           <h4>CreckFlix</h4>
