@@ -49,7 +49,7 @@ function AboutMe() {
 
   useEffect(() => {
     const { pageYOffset } = window;
-    console.log(pageYOffset);
+   
     if (intInView && pageYOffset > 50) {
       setSectionHandler("#aboutme");
     }
