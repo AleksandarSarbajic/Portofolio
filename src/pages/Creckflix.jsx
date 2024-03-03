@@ -204,7 +204,7 @@ function CreckFlix() {
           <h4>The Wild Oasis</h4>
           <p>
             The Wild Oasis is a user friendly hotel management application. That
-            helps employees menage everything about hotel data.
+            helps employees manage everything about hotel data.
           </p>
           <StyledLink to={"/es1"}>
             View Project <BsArrowRight />
