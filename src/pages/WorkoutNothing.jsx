@@ -27,22 +27,23 @@ import Contact from "../ui/Contact";
 import StyledHeadingBox from "../ui/HeadingBox";
 import useScrollToTop from "../hooks/UseScrollToTop";
 import StyledBoxImage from "../ui/StyledBoxImage";
+import { useDarkMode } from "../context/DarkModeContext";
 
-function NothingTodo() {
+function WorkoutNothing() {
   useScrollToTop();
+  const { isDarkMode } = useDarkMode();
 
   return (
     <>
       <ProjectHeader>
         <StyledHeadingBox $project>
-          <StyledProjectHeading>Nothing To-do</StyledProjectHeading>
+          <StyledProjectHeading>WorkoutNothing</StyledProjectHeading>
         </StyledHeadingBox>
         <StyledSubHeading>
-          WorkoutNothing is a React-TypeScript application build for task
-          management. This was my first big project using TypeScript with React.
-          This application includes a lot of connections with Supabase so
-          everyone can have the same overall experience to stay updated with
-          their tasks.
+          WorkoutNothing is a React-TypeScript application built to help you
+          workout and keep track of your progress. Each exercise has its own
+          dedicated page for stats and allows the user to have full control over
+          their profile and workouts.
         </StyledSubHeading>
       </ProjectHeader>
       <ProjectListContainer>
@@ -76,38 +77,46 @@ function NothingTodo() {
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Links</ProjectListItem>
-          <ProjectListItem link={"https://nothing-todos.netlify.app/login"}>
+          <ProjectListItem link={"workoutnothing.netlify.app/dashboard"}>
             Live
           </ProjectListItem>
           <ProjectListItem
-            link={"https://github.com/AleksandarSarbajic/NothingTodo"}
+            link={"https://github.com/AleksandarSarbajic/WorkoutNothing"}
           >
             GitHub
           </ProjectListItem>
         </StyledList>
       </ProjectListContainer>
       <StyledProjectImage
-        src="dashboardTodo.png"
-        alt="Screenshot of the Nothing To-Do "
+        src={
+          isDarkMode
+            ? "WorkoutDashboard--dark.webp"
+            : "WorkoutDashboard--light.webp"
+        }
+        alt="Dashboard of the WorkoutNothing application"
       />
 
       <StyledProjectHeading $small $margin>
         Project Purpose and Goal
       </StyledProjectHeading>
       <StyledSubHeading>
-        This project included the following 4 phases and iterations of the site.
-        The first phase was enabling users to create their own account using the
-        form or few different providers. The second phase was creating main page
-        for users where they can create their task list and have a different
-        variability of their categories. The third phase was applying settings
-        information to whole application and their tasks so user can change what
-        they want to see on the screen. And the fourth phase was creating
-        beautiful analytics so users can track their own progress.
+        This project included the 4 following phases and iterations of the site.
+        The first phase creating settings that would allow users to customize
+        their profile, units and general settings. The second phase is adding
+        exercises, measures and creating pages for each one so user can have
+        every info about their progress and instructions if they don&apos;t know
+        to perform certain exercises. The third phase is enabling users to start
+        a workout and add exercise to their workout by keeping track of the time
+        and allowing users to add rest time for each set and exercise. The
+        fourth phase involves creating a history of workouts, allowing users to
+        create workout templates, edit their previous workouts, and display
+        stats on the dashboard.
       </StyledSubHeading>
       <StyledSubHeading $space>
         The most effective approach I found to implement these 4 phases is to
-        create login page, and after that create reusable pages and components
-        that are connected to settings of user account.
+        create settings, exercises and connect everything to them, and after
+        that to create the logic of creating a workout and submitting it with
+        updating exercises records.
       </StyledSubHeading>
       <StyledProjectBox>
         <StyledStack>
@@ -148,34 +157,53 @@ function NothingTodo() {
             ReactQuery is used across the entire project to provide the fastest
             performance, because we can store stale data in it and as we go to
             the same page that is using that data loading will be significantly
-            faster. Reach Hook Form came first in mind for using the forms,
-            because how fast and easy you can work with it. In this project I
-            went for mobile first option for responsive using styled components.
-            Netlify is also an obvious choice for deployment because of its
-            speed and reliability.
+            faster. I chose to work with React Context so that it can store
+            current data from workout and the time (of the workout) since I
+            wanted to use it in a large project instead of Redux. React Hook
+            Form came to mind first for using the forms, because of how fast and
+            easy you can work with it. For styling, I used styled components
+            because they are efficient and don&apos;t need a huge amount of
+            files because they are written in react. Netlify is also an obvious
+            choice for deployment because of its speed and reliability.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
       <StyledImageBox $nothing={true}>
         <StyledBoxImage
-          src="categoriesTodo.png"
-          alt="Image of categories on the Nothing To-Do page"
+          src={
+            isDarkMode
+              ? "WorkoutHistory--dark.webp"
+              : "WorkoutHistory--light.webp"
+          }
+          alt="History of the workouts on WorkoutNothing"
         />
 
         <StyledBoxImage
           style={{ gridRow: "1 / 4", gridColumn: " 2 / 3" }}
-          src="settingsTodo.png"
-          alt="Image of settings where you can adjust them on the Nothing To-Do page"
+          src={
+            isDarkMode
+              ? "WorkoutWorkoutProgress--dark.webp"
+              : "WorkoutWorkoutProgress--light.webp"
+          }
+          alt="Image of workout in progress on WorkoutNothing"
           delay={true}
         />
         <StyledBoxImage
-          src="searchTodo.png"
-          alt="Image of seearching the task on the Nothing To-Do page"
+          src={
+            isDarkMode
+              ? "WorkoutExercises--dark.webp"
+              : "WorkoutExercises--light.webp"
+          }
+          alt="Image of a page where all exercises are on WorkoutNothing"
         />
         <StyledBoxImage
           style={{ gridColumn: " 1 / 2" }}
-          src="analyticsTodo.png"
-          alt="Image of analytics on the Nothing To-Do page"
+          src={
+            isDarkMode
+              ? "WorkoutMeasures--dark.webp"
+              : "WorkoutMeasures--light.webp"
+          }
+          alt="An image featuring all the measures on WorkoutNothing"
         />
       </StyledImageBox>
       <StyledProjectBox>
@@ -185,24 +213,31 @@ function NothingTodo() {
             Problems and Thought Process
           </StyledProjectHeading>
           <StyledSubHeading $big>
-            Like most projects, there is always some problem on your journey,
-            the most difficult was using TypeScript with custom components and
-            props compensated with data from Supabase.
+            Like with most projects, always some sort of a problem appears on
+            your journey, the most difficult one was creating whole logic with
+            workout context and working with best practices while using
+            TypeScript with it so I don&apos;t provoke errors
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
-            As well for the application the be the fastest as possible I was
-            making components as reusable as possible and utilized props for as
-            many components. That&apos; why i used styled components, because
-            the structure of CSS in JS is much easier to use, especially because
-            styled components uses their own props too.
+            As well for the application, to be the fastest possible I was making
+            components as reusable as they can be because of how complex and big
+            workout context was and how many exercises are in the data base
+            because it needs a lot of time so they can be loaded so other things
+            needed to be small and reusable. That&apos;s why i used styled
+            components, because the structure of CSS in JS is much easier to
+            use, especially because styled components use their own props too.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
 
       <StyledProjectImage
-        src="loginTodo.png"
-        alt="Image when you are logging in on the Nothing To-Do page"
+        src={
+          isDarkMode
+            ? "WorkoutSettings--dark.webp"
+            : "WorkoutSettings--light.webp"
+        }
+        alt="Image of a settings page on WorkoutNothing"
       />
 
       <StyledProjectHeading $small $margin>
@@ -210,10 +245,11 @@ function NothingTodo() {
       </StyledProjectHeading>
       <StyledSubHeading>
         I could spend all day describing the lessons that I learned while
-        working on this project, but the most important ones involved in my
-        newfound understanding of TypeScipt and React. As my first large project
-        using TypeScipt, I learned a lot about the types, interfaces and how to
-        make components more reusable with generic types.
+        working on this project, but the most important ones are involved in my
+        newfound understanding of TypeScipt and React. I always wanted to create
+        such an application for working out and to understand how to implement
+        such a logic allowing people to be more productive and to have a better
+        workout
       </StyledSubHeading>
       <StyledProjectHeading $medium $margin>
         Other Projects
@@ -253,4 +289,4 @@ function NothingTodo() {
   );
 }
 
-export default NothingTodo;
+export default WorkoutNothing;

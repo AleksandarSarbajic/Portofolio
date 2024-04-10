@@ -11,6 +11,7 @@ import useScrollTo from "../hooks/UseScrollTo";
 
 import { useEffect } from "react";
 import { useIsInView } from "../context/IsInViewContext";
+import { useDarkMode } from "../context/DarkModeContext";
 
 const StyledContainer = styled.section`
   padding: 1rem;
@@ -43,6 +44,8 @@ const StyledDescription = styled.p`
 function Projects() {
   const { ref: intRef, inView: intInView } = useInView({ threshold: 1 });
 
+  const { isDarkMode } = useDarkMode();
+
   const { setSectionHandler } = useIsInView();
 
   useEffect(() => {
@@ -60,6 +63,7 @@ function Projects() {
     threshold: 1,
     triggerOnce: true,
   });
+
   return (
     <StyledContainer ref={containerRef}>
       <StyledHeadingBox>
@@ -74,6 +78,24 @@ function Projects() {
       </StyledDescription>
 
       <ProjectBox>
+        <Project time={true}>
+          <img
+            src={
+              isDarkMode
+                ? "WorkoutDashboard--dark.webp"
+                : "WorkoutDashboard--light.webp"
+            }
+            alt="Image of dashboard on the WorkoutNothing"
+          />
+          <h4>WorkoutNothing</h4>
+          <p>
+            WorkoutNothing is a web application that helps people track their
+            workouts, discover new exercises, and track their body measurements.
+          </p>
+          <StyledLink to={"/es4"}>
+            View Project <BsArrowRight />
+          </StyledLink>
+        </Project>
         <Project>
           <img
             src="dashboardTodo.png"
@@ -88,6 +110,7 @@ function Projects() {
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
+
         <Project>
           <img
             src="WildOasis.webp"
@@ -118,7 +141,7 @@ function Projects() {
           </StyledLink>
         </Project>
 
-        <Project time={true}>
+        {/* <Project time={true}>
           <img src="FlixMovies.webp" alt="Image of movies on the CreckFlix" />
           <h4>CreckFlix</h4>
           <p>
@@ -128,7 +151,7 @@ function Projects() {
           <StyledLink to={"/es4"}>
             View Project <BsArrowRight />
           </StyledLink>
-        </Project>
+        </Project> */}
       </ProjectBox>
     </StyledContainer>
   );

@@ -49,7 +49,7 @@ function AboutMe() {
 
   useEffect(() => {
     const { pageYOffset } = window;
-   
+
     if (intInView && pageYOffset > 50) {
       setSectionHandler("#aboutme");
     }
@@ -92,7 +92,7 @@ function AboutMe() {
         <StyledText>
           Since then, I&apos;ve been honing my skills and studying JavaScript
           with other third-party libraries. When I&apos;m not programming, I
-          like to work out in the gym. My aim is to assist a company in
+          like to workout in the gym. My aim is to assist a company in
           constructing enjoyable products and accomplishing their goals.
         </StyledText>
       </StyledBox>

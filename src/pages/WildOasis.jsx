@@ -193,7 +193,7 @@ function WildOasis() {
             making components as reusable as possible and utilized props for as
             many components. That&apos; why i used styled components, because
             the structure of CSS in JS is much easier to use, especially because
-            styled components uses their own props to.
+            styled components uses their own props too.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
