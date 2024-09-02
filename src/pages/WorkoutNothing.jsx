@@ -77,7 +77,9 @@ function WorkoutNothing() {
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Links</ProjectListItem>
-          <ProjectListItem link={"workoutnothing.netlify.app/dashboard"}>
+          <ProjectListItem
+            link={"https://workoutnothing.netlify.app/dashboard"}
+          >
             Live
           </ProjectListItem>
           <ProjectListItem
