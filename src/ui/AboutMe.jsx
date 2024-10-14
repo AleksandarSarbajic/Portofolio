@@ -74,7 +74,7 @@ function AboutMe() {
       </StyledHeadingBox>
       <StyledBox ref={headingRef}>
         <StyledText>
-          I&apos;m a 21-year-old introvert who found peace of mind in writing
+          I&apos;m a 22-year-old introvert who found peace of mind in writing
           code.
         </StyledText>
         <StyledText>

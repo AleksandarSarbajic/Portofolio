@@ -2,16 +2,20 @@ import styled, { css } from "styled-components";
 import StyledSkill from "./Skill";
 import {
   SiCss3,
+  SiExpress,
   SiGit,
   SiHtml5,
   SiJavascript,
+  SiMongodb,
   SiNextdotjs,
+  SiNodedotjs,
+  SiPrisma,
   SiReact,
   SiReactquery,
-  SiReactrouter,
   SiSass,
   SiStyledcomponents,
   SiSupabase,
+  SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
 import { useInView } from "react-intersection-observer";
@@ -144,21 +148,8 @@ function Skills() {
           TypeScript
         </StyledSkill>
         <StyledSkill>
-          <SiSass />
-          SASS
-        </StyledSkill>
-        <StyledSkill>
-          <SiStyledcomponents />
-          StyledComponents
-        </StyledSkill>
-
-        <StyledSkill>
           <SiReact />
           React
-        </StyledSkill>
-        <StyledSkill>
-          <SiReactrouter />
-          ReactRouter
         </StyledSkill>
         <StyledSkill>
           <SiReactquery />
@@ -168,7 +159,34 @@ function Skills() {
           <SiNextdotjs />
           NextJS
         </StyledSkill>
-
+        <StyledSkill>
+          <SiNodedotjs />
+          NodeJs
+        </StyledSkill>
+        <StyledSkill>
+          <SiExpress />
+          Express
+        </StyledSkill>
+        <StyledSkill>
+          <SiSass />
+          SASS
+        </StyledSkill>
+        <StyledSkill>
+          <SiStyledcomponents />
+          StyledComponents
+        </StyledSkill>
+        <StyledSkill>
+          <SiTailwindcss />
+          TailWind
+        </StyledSkill>
+        <StyledSkill>
+          <SiMongodb />
+          MongoDB
+        </StyledSkill>
+        <StyledSkill>
+          <SiPrisma />
+          Prisma
+        </StyledSkill>
         <StyledSkill>
           <SiSupabase />
           Supabase
