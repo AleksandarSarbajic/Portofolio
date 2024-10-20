@@ -42,7 +42,7 @@ function WildOasisWeb() {
         <StyledSubHeading>
           The Wild Oasis Web is a fullstack NextJS application build for hotel
           reservations. I built this project while practicing NextJS, Stripe,
-          backend and more. This application is minimalistic and easy to use for
+          backend and more. This application is minimalistic, accessible to
           everyone.
         </StyledSubHeading>
       </ProjectHeader>
@@ -102,14 +102,14 @@ function WildOasisWeb() {
       <StyledSubHeading>
         This project included the following 5 phases and iterations of the site.
         Phase 1 is simply the cabins page where visitors can see all the info
-        about a specific cabin, sort the cabins. Phase 2 is implemented log in
-        with NextAuth and creating a profile page with home, reservations and
+        about a specific cabin and sort the cabins. Phase 2 is implemented log
+        in with NextAuth and creating a profile page with home, reservations and
         guest profile where user can edit his profile. Phase 3 is all about
         creating a reservation. When user visits one of the cabins first, he
         needs to be logged in so he can create a reservation. User can select
         how many days he wants to stay and see if some days are already
         reserved, how many guests and should breakfast be included. Phase 4 is
-        enabling users to see his reservations and edit or delete them. And the
+        enabling users to see their reservations and edit or delete them. The
         last phase 5 is about enabling stripe hosted checkout page for paying
         the reservation.
       </StyledSubHeading>
@@ -161,7 +161,7 @@ function WildOasisWeb() {
             I chose to do the data mutations for deleting the reservations with
             useOptimistic hook from React. For styling the application I used
             TailWindCSS because it&apos;s very easy to use and it&apos;s very
-            fast to style the application and want to practice my tailwind
+            quick to style the application and I wanted to practice my tailwind
             skills. And for the paying the reservation I chose Stripe. Vercel is
             also an obvious choice for deployment because of its speed and
             reliability for NextJS projects.
@@ -189,7 +189,7 @@ function WildOasisWeb() {
         />
       </StyledImageBox>
       <StyledProjectBox>
-        <div></div>
+        <div />
         <div>
           <StyledProjectHeading $small>
             Problems and Thought Process
@@ -203,8 +203,8 @@ function WildOasisWeb() {
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
-            As well for the application the be the fastest as possible I was
-            making components as reusable as possible and utilized props for as
+            As well for the application the to be the fast as possible I was
+            making components as reusable as could be and utilized props for as
             many components.
           </StyledSubHeading>
         </div>
@@ -222,10 +222,10 @@ function WildOasisWeb() {
         I could spend all day describing the lessons that I learned while
         working on this project, but the most important ones involved in my
         newfound understanding of NextJS, Stripe, backend logic and
-        useOptimistic hook. As my third large project full stack project using
-        NextJS, I learned a lot about NextJS hydration and how to use it. How to
-        create server side rendering with combination with client side rendering
-        and how to use the NextAuth for log in. Stripe checkout was also a great
+        useOptimistic hook. As my third large full stack project using NextJS, I
+        learned a lot about NextJS hydration and how to use it, how to develop
+        server side rendering with combination with client side rendering, and
+        how to use the NextAuth for log in. Stripe checkout was also a great
         experience for me because I learned how to create a hosted checkout page
         and how to connect it to the NextJS application.
       </StyledSubHeading>
