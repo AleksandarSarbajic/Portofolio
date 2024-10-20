@@ -74,7 +74,7 @@ function Projects() {
       <StyledDescription ref={headingRef}>
         Having a project at work is something I enjoy, along with learning
         something new. Take a look at some of the applications that I have been
-        working on.
+        working on:
       </StyledDescription>
 
       <ProjectBox>

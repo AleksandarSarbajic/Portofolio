@@ -128,7 +128,7 @@ function Skills() {
       <StyledText ref={headingRef}>
         Through my experience, I have acquired a thorough understanding of web
         development concepts and have dedicated a substantial amount of time to
-        implementing them in real-world scenarios and applications.
+        implement them in real-world scenarios and applications.
       </StyledText>
       <StyledBox ref={boxRef} $inView={boxInView}>
         <StyledSkill>

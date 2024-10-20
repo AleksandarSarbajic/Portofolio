@@ -119,10 +119,10 @@ function TheBugBook() {
         Phase 2 was to create a main page where user can create posts and see
         other users posts. Phase 3 was to create a profile page where user can
         see his posts and edit his profile. Phase 4 was to enable users to like,
-        comment posting, bookmark and follow other users. Phase 5 was to enable
-        users to see his notifications, bookmarks and search for other users and
-        content. And Phase 6 is to enable users that they can use messages and
-        chat with other users.
+        comment posting, bookmark posts and follow other users. Phase 5 was to
+        enable users to see his notifications, bookmarks and search for other
+        users and content. And Phase 6 is to enable users that they can use
+        messages and chat with other users.
       </StyledSubHeading>
       <StyledSubHeading $space>
         The most effective approach I found to implement these 6 phases is to
