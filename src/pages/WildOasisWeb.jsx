@@ -1,10 +1,11 @@
 import {
-  SiNetlify,
+  SiAxios,
+  SiNextdotjs,
   SiReact,
-  SiReacthookform,
-  SiReactquery,
-  SiStyledcomponents,
+  SiStripe,
   SiSupabase,
+  SiTailwindcss,
+  SiVercel,
 } from "react-icons/si";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -28,7 +29,7 @@ import useScrollToTop from "../hooks/UseScrollToTop";
 import StyledBoxImage from "../ui/StyledBoxImage";
 import { useDarkMode } from "../context/DarkModeContext";
 
-function WildOasis() {
+function WildOasisWeb() {
   const { isDarkMode } = useDarkMode();
   useScrollToTop();
 
@@ -36,21 +37,19 @@ function WildOasis() {
     <>
       <ProjectHeader>
         <StyledHeadingBox $project>
-          <StyledProjectHeading>The Wild Oasis</StyledProjectHeading>
+          <StyledProjectHeading>The Wild Oasis Web</StyledProjectHeading>
         </StyledHeadingBox>
         <StyledSubHeading>
-          The Wild Oasis is a React application build for hotel service. I built
-          this project while practicing React, Supabase and more. This
-          application includes a lot of connections with Supabase so everyone
-          can have the same overall experience as well to stay updated about
-          customers.
+          The Wild Oasis Web is a fullstack NextJS application build for hotel
+          reservations. I built this project while practicing NextJS, Stripe,
+          backend and more. This application is minimalistic and easy to use for
+          everyone.
         </StyledSubHeading>
       </ProjectHeader>
       <ProjectListContainer>
         <StyledList>
           <ProjectListItem heading={true}>Type</ProjectListItem>
           <ProjectListItem>Practice</ProjectListItem>
-          <ProjectListItem>Desktop only</ProjectListItem>
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Stack</ProjectListItem>
@@ -58,38 +57,43 @@ function WildOasis() {
             <SiReact /> React
           </ProjectListItem>
           <ProjectListItem>
-            <SiReactquery /> React Query
+            <SiNextdotjs />
+            NextJS
           </ProjectListItem>
           <ProjectListItem>
-            <SiStyledcomponents /> Styled Componets
+            <SiTailwindcss />
+            TailWindCSS
           </ProjectListItem>
           <ProjectListItem>
-            <SiReacthookform /> React Hook Form
+            <SiStripe />
+            Stripe
+          </ProjectListItem>
+          <ProjectListItem>
+            <SiAxios />
+            Axious
           </ProjectListItem>
           <ProjectListItem>
             <SiSupabase /> Supabase
           </ProjectListItem>
           <ProjectListItem $blue>
-            <SiNetlify /> Netlify
+            <SiVercel /> Vercel
           </ProjectListItem>
         </StyledList>
         <StyledList>
           <ProjectListItem heading={true}>Links</ProjectListItem>
-          <ProjectListItem
-            link={"https://the-wild-oasis-aleksandar.netlify.app/dashboard"}
-          >
+          <ProjectListItem link={"https://the-wild-oasis-web-black.vercel.app"}>
             Live
           </ProjectListItem>
           <ProjectListItem
-            link={"https://github.com/AleksandarSarbajic/the-wild-oasis"}
+            link={"https://github.com/AleksandarSarbajic/the-wild-oasis-web"}
           >
             GitHub
           </ProjectListItem>
         </StyledList>
       </ProjectListContainer>
       <StyledProjectImage
-        src="WildOasis.webp"
-        alt="Screenshot of the WildOasis page"
+        src="WebWildOasisLanding.webp"
+        alt="Screenshot of the WebWildOasis page"
       />
 
       <StyledProjectHeading $small $margin>
@@ -97,41 +101,49 @@ function WildOasis() {
       </StyledProjectHeading>
       <StyledSubHeading>
         This project included the following 5 phases and iterations of the site.
-        Phase 1 is simply the cabins page where employee can see all the info
-        about a specific cabin, sort the cabins, edit and add a new cabin. Phase
-        2 is by far the largest and the most complex, as it includes all booking
-        information and all functions so the employee can edit them. Phase 3 is
-        all about overall UX, where employees can set their settings, create
-        other user account and update their own account. Phase 4 is the second
-        largest phase, where we created the beautiful dashboard about all
-        information that&apos;s happening. And the last phase 5 is about
-        enabling login, logout and beautiful dark mode.
+        Phase 1 is simply the cabins page where visitors can see all the info
+        about a specific cabin, sort the cabins. Phase 2 is implemented log in
+        with NextAuth and creating a profile page with home, reservations and
+        guest profile where user can edit his profile. Phase 3 is all about
+        creating a reservation. When user visits one of the cabins first, he
+        needs to be logged in so he can create a reservation. User can select
+        how many days he wants to stay and see if some days are already
+        reserved, how many guests and should breakfast be included. Phase 4 is
+        enabling users to see his reservations and edit or delete them. And the
+        last phase 5 is about enabling stripe hosted checkout page for paying
+        the reservation.
       </StyledSubHeading>
       <StyledSubHeading $space>
         The most effective approach I found to implement these 5 phases is to
-        create a distinct page first, and then add the global states and login
-        functions. This way dashboard information was rendered conditionally
-        with bookings being updated.
+        create a cabins page, and after that to create log in logic with
+        NextAuth and profile page. Afterwards create seperate cabins where user
+        can create a reservation and see his reservations. And when everything
+        was working to enable paying with stripe.
       </StyledSubHeading>
       <StyledProjectBox>
         <StyledStack>
           <StyledStackItem $blue>
             <SiReact /> React
           </StyledStackItem>
-          <StyledStackItem $red>
-            <SiReactquery /> React Query
-          </StyledStackItem>
-          <StyledStackItem $pink>
-            <SiStyledcomponents /> Styled Components
+          <StyledStackItem $black>
+            <SiNextdotjs /> NextJS
           </StyledStackItem>
           <StyledStackItem $blue>
-            <SiReacthookform /> React Hook Form
+            <SiTailwindcss /> TailWindCSS
+          </StyledStackItem>
+          <StyledStackItem $red>
+            <SiAxios />
+            Axios
+          </StyledStackItem>
+          <StyledStackItem $green>
+            <SiStripe />
+            Stripe
           </StyledStackItem>
           <StyledStackItem $green>
             <SiSupabase /> Supabase
           </StyledStackItem>
-          <StyledStackItem $blue>
-            <SiNetlify /> Netlify
+          <StyledStackItem $black>
+            <SiVercel /> Vercel
           </StyledStackItem>
         </StyledStack>
         <div>
@@ -139,40 +151,40 @@ function WildOasis() {
             Web Stack and Explanation
           </StyledProjectHeading>
           <StyledSubHeading $big>
-            React made the most sense for this web application because it&apos;s
-            very simple to use Supabase in combination with ReactQuery which
-            provide very smooth experience. Supabase was chosen because of the
+            I wanted to use NextJs so i can practice my backend skills with new
+            technologies that i learned. Supabase was chosen because of the
             ability how easy it to connect to it and to add data that we need by
             creating tables.
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
-            ReactQuery is used across the entire project to provide the fastest
-            performance, because we can store stale data in it and as we go to
-            the same page that is using that data loading will be significantly
-            faster. Reach Hook Form came first in mind for using the forms,
-            because how fast and easy you can work with it. Netlify is also an
-            obvious choice for deployment because of its speed and reliability.
+            I chose to do the data mutations for deleting the reservations with
+            useOptimistic hook from React. For styling the application I used
+            TailWindCSS because it&apos;s very easy to use and it&apos;s very
+            fast to style the application and want to practice my tailwind
+            skills. And for the paying the reservation I chose Stripe. Vercel is
+            also an obvious choice for deployment because of its speed and
+            reliability for NextJS projects.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
       <StyledImageBox>
         <StyledBoxImage
-          src="bookings.webp"
-          alt="Image of bookings on page the WildOasis"
+          src="WebWildOasisCabins.webp"
+          alt="Image of cabins on page the TheWildOasisWeb"
         />
         <StyledBoxImage
-          src="cabins.webp"
-          alt="Image of cabins on page the WildOasis"
+          src="WebWildOasisReservations.webp"
+          alt="Image of reservations on page the WildOasisWeb"
           delay={true}
         />
         <StyledBoxImage
-          src="createuser.webp"
-          alt="Image by creating the user on the WildOasis"
+          src="WebWildOasisCabin.webp"
+          alt="Image of single cain on the WildOasisWeb"
         />
         <StyledBoxImage
-          src="settings.webp"
-          alt="Image of settings where you can adjust them on the WildOasis"
+          src="WebWildOasisAbout.webp"
+          alt="Image of about page on the WildOasisWeb"
           delay={true}
         />
       </StyledImageBox>
@@ -184,25 +196,23 @@ function WildOasis() {
           </StyledProjectHeading>
           <StyledSubHeading $big>
             Like most projects, there is always some problem on your journey,
-            the most difficult area was the organization of the data and loading
-            the same data as fast as possible so our app doesn&apos;t get slow.
-            I realized how important maintaining the speed of data flow is
-            important.
+            the most difficult area was the using the stripe for the first time
+            with NextJS. I had to learn how to use the stripe and how to connect
+            it to the NextJS application. The most difficult part was to enable
+            a hosted checkout page for the first time.
           </StyledSubHeading>
 
           <StyledSubHeading $big $space>
             As well for the application the be the fastest as possible I was
             making components as reusable as possible and utilized props for as
-            many components. That&apos; why i used styled components, because
-            the structure of CSS in JS is much easier to use, especially because
-            styled components uses their own props too.
+            many components.
           </StyledSubHeading>
         </div>
       </StyledProjectBox>
 
       <StyledProjectImage
-        src="checkin.webp"
-        alt="Image when you are checking in or checking out a booking"
+        src="WebWildOasisStripe.webp"
+        alt="Image of stripe checkout on the WildOasisWeb"
       />
 
       <StyledProjectHeading $small $margin>
@@ -211,12 +221,13 @@ function WildOasis() {
       <StyledSubHeading>
         I could spend all day describing the lessons that I learned while
         working on this project, but the most important ones involved in my
-        newfound understanding of React Hooks, Supabase, ReactQuery and Styled
-        components. As my first large project using React, I learned a lot of
-        data structure and code organization. When I first began, I was confused
-        about ReactQuery and Supabase tables, but as soon as I understood how it
-        works, everything went really well. With a lot of refactoring code and
-        resolving issues, for better readability and fewer late night problems.
+        newfound understanding of NextJS, Stripe, backend logic and
+        useOptimistic hook. As my third large project full stack project using
+        NextJS, I learned a lot about NextJS hydration and how to use it. How to
+        create server side rendering with combination with client side rendering
+        and how to use the NextAuth for log in. Stripe checkout was also a great
+        experience for me because I learned how to create a hosted checkout page
+        and how to connect it to the NextJS application.
       </StyledSubHeading>
       <StyledProjectHeading $medium $margin>
         Other Projects
@@ -224,16 +235,15 @@ function WildOasis() {
       <ProjectBox $margin>
         <Project>
           <img
-            src="WebWildOasisLanding.webp"
-            alt="Image of landing page on the WildOasisWeb "
+            src="WildOasis.webp"
+            alt="Image of dashboard on the WildOasis page"
           />
-          <h4>The Wild Oasis Web</h4>
+          <h4>The Wild Oasis</h4>
           <p>
-            The Wild Oasis Web is a user friendly fullstack application. The
-            purpose of this is to enable users to book cabins that WildOasis
-            company offers.
+            The Wild Oasis is a user friendly hotel management application. That
+            helps employees manage everything about hotel data.
           </p>
-          <StyledLink to={"/es5"}>
+          <StyledLink to={"/es1"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
@@ -259,4 +269,4 @@ function WildOasis() {
   );
 }
 
-export default WildOasis;
+export default WildOasisWeb;

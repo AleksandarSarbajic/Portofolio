@@ -271,17 +271,19 @@ function WorkoutNothing() {
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
-        <Project time={true}>
+        <Project>
           <img
-            src="TastyTrail.webp"
-            alt="Image of landing page on the Tasty Trail"
+            src={`${
+              isDarkMode ? "TheBugBook-dark.webp" : "TheBugBook-light.webp"
+            } `}
+            alt="Image of landing page on the Bug Book"
           />
-          <h4>Tasty Trail</h4>
+          <h4>The Bug Book</h4>
           <p>
-            An e-commerce application built with React & Redux for a delivery
-            company.
+            An fullstack social media application built to help you find other
+            people and talk with them.
           </p>
-          <StyledLink to={"/es2"}>
+          <StyledLink to={"/es6"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>

@@ -78,6 +78,22 @@ function Projects() {
       </StyledDescription>
 
       <ProjectBox>
+        <Project>
+          <img
+            src={`${
+              isDarkMode ? "TheBugBook-dark.webp" : "TheBugBook-light.webp"
+            } `}
+            alt="Image of landing page on the Bug Book"
+          />
+          <h4>The Bug Book</h4>
+          <p>
+            An fullstack social media application built to help you find other
+            people and talk with them.
+          </p>
+          <StyledLink to={"/es6"}>
+            View Project <BsArrowRight />
+          </StyledLink>
+        </Project>
         <Project time={true}>
           <img
             src={
@@ -96,22 +112,24 @@ function Projects() {
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
+
         <Project>
           <img
-            src="dashboardTodo.png"
-            alt="Image of landing page on the World Wise"
+            src="WebWildOasisLanding.webp"
+            ref={intRef}
+            alt="Image of landing page on the WildOasisWeb "
           />
-          <h4>Nothing To-Do</h4>
+          <h4>The Wild Oasis Web</h4>
           <p>
-            Nothing To-Do is todo-list application inspired by Nothing Company
-            design.
+            The Wild Oasis Web is a user friendly fullstack application. The
+            purpose of this is to enable users to book cabins that WildOasis
+            company offers.
           </p>
-          <StyledLink to={"/es3"}>
+          <StyledLink to={"/es5"}>
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
-
-        <Project>
+        <Project time={true}>
           <img
             src="WildOasis.webp"
             ref={intRef}
@@ -126,7 +144,22 @@ function Projects() {
             View Project <BsArrowRight />
           </StyledLink>
         </Project>
-        <Project time={true}>
+        {/* 
+        <Project>
+          <img
+            src="dashboardTodo.png"
+            alt="Image of landing page on the World Wise"
+          />
+          <h4>Nothing To-Do</h4>
+          <p>
+            Nothing To-Do is todo-list application inspired by Nothing Company
+            design.
+          </p>
+          <StyledLink to={"/es3"}>
+            View Project <BsArrowRight />
+          </StyledLink>
+        </Project> */}
+        {/* <Project time={true}>
           <img
             src="TastyTrail.webp"
             alt="Image of landing page on the Tasty Trail"
@@ -139,7 +172,7 @@ function Projects() {
           <StyledLink to={"/es2"}>
             View Project <BsArrowRight />
           </StyledLink>
-        </Project>
+        </Project> */}
 
         {/* <Project time={true}>
           <img src="FlixMovies.webp" alt="Image of movies on the CreckFlix" />

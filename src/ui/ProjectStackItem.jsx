@@ -27,6 +27,11 @@ const StyledStackItem = styled.li`
       color: var(--color-orange-400);
     `}
   ${(props) =>
+    props.$black &&
+    css`
+      color: var(--color-black-700);
+    `}
+  ${(props) =>
     props.$purple &&
     css`
       color: var(--color-pink-700);

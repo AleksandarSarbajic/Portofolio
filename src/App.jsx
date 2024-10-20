@@ -7,13 +7,15 @@ import Landingpage from "./pages/Landingpage";
 import RedirectPage from "./pages/RedirectPage";
 import WildOasis from "./pages/WildOasis";
 import ErrorPage from "./ui/ErrorPage";
-import TastyTrail from "./pages/TastyTrail";
+// import TastyTrail from "./pages/TastyTrail";
 
 // import WorldWise from "./pages/WorldWise";
 import { IsInViewProvider } from "./context/IsInViewContext";
 import UseEasterEgg from "./hooks/UseEasterEgg";
-import NothingTodo from "./pages/NothingTodo";
+// import NothingTodo from "./pages/NothingTodo";
 import WorkoutNothing from "./pages/WorkoutNothing";
+import WildOasisWeb from "./pages/WildOasisWeb";
+import TheBugBook from "./pages/TheBugBook";
 
 const router = createBrowserRouter([
   {
@@ -29,17 +31,25 @@ const router = createBrowserRouter([
         path: "/es1",
         element: <WildOasis />,
       },
-      {
-        path: "/es2",
-        element: <TastyTrail />,
-      },
-      {
-        path: "/es3",
-        element: <NothingTodo />,
-      },
+      // {
+      //   path: "/es2",
+      //   element: <TastyTrail />,
+      // },
+      // {
+      //   path: "/es3",
+      //   element: <NothingTodo />,
+      // },
       {
         path: "/es4",
         element: <WorkoutNothing />,
+      },
+      {
+        path: "/es5",
+        element: <WildOasisWeb />,
+      },
+      {
+        path: "/es6",
+        element: <TheBugBook />,
       },
     ],
   },
